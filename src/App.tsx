@@ -50,15 +50,17 @@ function App() {
 		},
 	};
 
+
 	return (
 		<Box direction="vertical" width="500px">
-			<ColorPicker
+			{/* <ColorPicker
 				value={valueColor}
 				setValue={setValueColor}
 				isAlpha
 				previewPicker
-			/>
-			{/* <DemoColor /> */}
+			/> */}
+	
+			<DemoColor />	
 			{/* <DemoDynamicRows />
 			<Range value={valueRange} setValue={setValueRange} />
 			<BorderRadius value={valueBorderRadius} setValue={setValueBorderRadius} /> */}

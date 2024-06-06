@@ -3,7 +3,6 @@ import _ from "lodash";
 import Settings from "wix-ui-icons-common/Settings";
 import { TextButton, Box } from "@wix/design-system";
 import type { ColorPickerGroup } from "../types";
-import { dataHooks } from "../constants";
 import { st, classes } from "./TabGroups.st.css";
 
 type TabGroupsProps = {
@@ -28,7 +27,7 @@ function TabGroups(props: TabGroupsProps) {
 	} = props;
 
 	return (
-		<Box className={st(classes.root, { disabled })} verticalAlign="middle">
+		<Box className={st(classes.root, { disabled })} verticalAlign="middle" gap="6px">
 			<div style={{ flex: 1 }} />
 			{showPalette &&
 				_.map(groups, (group) => (
@@ -41,7 +40,6 @@ function TabGroups(props: TabGroupsProps) {
 							onClick={() =>
 								_.isFunction(handleActiveTab) && handleActiveTab(group)
 							}
-							dataHook={dataHooks.nameGroup}
 							selected={group.id === activedGroupId}
 							disabled={disabled}
 						>
@@ -61,7 +59,6 @@ function TabGroups(props: TabGroupsProps) {
 										transform: "translate(-5px, -50%)",
 									}}
 									onClick={handleToggleSwatchActions}
-									data-hook={dataHooks.showActionsGroup}
 								/>
 							</div>
 						)}

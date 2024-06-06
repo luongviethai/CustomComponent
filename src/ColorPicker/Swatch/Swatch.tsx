@@ -5,7 +5,6 @@ import Delete from "wix-ui-icons-common/Delete";
 import Edit from "wix-ui-icons-common/Edit";
 import { Box, Tooltip } from "@wix/design-system";
 import type { ColorPickerValue } from "../types";
-import { dataHooks } from "../constants";
 import { st, classes } from "./Swatch.st.css";
 
 type SwatchProps = {
@@ -48,13 +47,8 @@ function Swatch(props: SwatchProps) {
 						selected: isSelected,
 						isTransparent: color?.code === "transparent",
 					})}
-					style={{ backgroundColor: code }}
+					style={{ backgroundColor: code }}	
 					onClick={() => _.isFunction(onSelect) && onSelect(color)}
-					data-hook={
-						isSelected
-							? dataHooks.backgroundSwatchColorSelected
-							: dataHooks.backgroundSwatchColor
-					}
 				>
 					<Tooltip
 						appendTo="window"
@@ -62,7 +56,7 @@ function Swatch(props: SwatchProps) {
 						content={color?.name || code}
 						disabled={disabled}
 					>
-						<span className={classes.swatchLabel}>{code}</span>
+						<div className={classes.swatchLabel}>{code}</div>
 					</Tooltip>
 				</div>
 				{showActions && (
@@ -70,7 +64,6 @@ function Swatch(props: SwatchProps) {
 						className={classes.swatchEditBtn}
 						width="16px"
 						height="16px"
-						data-hook={dataHooks.editColor}
 					/>
 				)}
 			</Box>
@@ -80,7 +73,6 @@ function Swatch(props: SwatchProps) {
 					onClick={handleDelete}
 					width="24px"
 					height="24px"
-					data-hook={dataHooks.deleteColor}
 				/>
 			)}
 		</div>

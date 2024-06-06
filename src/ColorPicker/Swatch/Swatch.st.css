@@ -49,6 +49,7 @@
 
 .swatchLabel {
 	opacity: 0;
+	height: 26px;
 }
 
 .swatchEditBtn {

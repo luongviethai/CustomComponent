@@ -6,7 +6,7 @@ import { CustomPicker } from "react-color";
 import { Saturation, Hue, Alpha } from "react-color/lib/components/common";
 import SliderPointer from "../SliderPointer";
 import type { ColorPickerValue, ValueColors } from "../types";
-import { FIELD_CODE, dataHooks } from "../constants";
+import { FIELD_CODE } from "../constants";
 import { st, classes } from "./Picker.st.css";
 
 type PickerProps = {
@@ -130,7 +130,6 @@ function Picker(props: PickerProps) {
 		<div
 			style={styles.saturation}
 			className={st(classes.root, { disabled })}
-			data-hook={dataHooks.pickerColor}
 		>
 			<Saturation
 				style={styles.Saturation}
@@ -174,7 +173,6 @@ function Picker(props: PickerProps) {
 			{isAlpha && (
 				<div
 					className={st(classes.picker, classes.alphaPickerWrapper)}
-					data-hook={dataHooks.alphaPicker}
 				>
 					<Alpha
 						style={styles.Alpha}

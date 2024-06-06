@@ -18,8 +18,6 @@ import {
 	Text,
 } from "@wix/design-system";
 
-import { dataHooks } from "./constants";
-
 import { classes, st } from "./Preview.st.css";
 
 import type { PreviewProps } from "./types";
@@ -90,14 +88,12 @@ function Preview(props: PreviewProps) {
 		<div
 			className={st(classes.canvas, "mb-preview-canvas")}
 			data-canvas={!_.isEmpty(previewStyles) || children ? true : undefined}
-			data-hook={dataHooks.canvas}
 			style={previewStyles}
 			onClick={!disabled ? onClickCanvas : undefined}
 		>
 			{!isHasValue() && addTitle && (
 				<AddItem
 					className={classes.addButton}
-					dataHook={dataHooks.addButton}
 					disabled={disabled}
 					size="small"
 					theme="plain"
@@ -135,22 +131,18 @@ function Preview(props: PreviewProps) {
 			ActionType,
 			{
 				children: IconButtonProps["children"];
-				dataHook: string;
 				onClick: React.MouseEventHandler;
 			}
 		> = {
 			edit: {
-				dataHook: dataHooks.editButton,
 				onClick: handleClickEditButton,
 				children: <IconSettings />,
 			},
 			delete: {
-				dataHook: dataHooks.deleteButton,
 				onClick: handleClickDeleteButton,
 				children: <IconDelete />,
 			},
 			reset: {
-				dataHook: dataHooks.resetButton,
 				onClick: handleClickResetButton,
 				children: <IconRevertReset />,
 			},
@@ -190,8 +182,6 @@ function Preview(props: PreviewProps) {
 					},
 					className
 				)}
-				data-disabled={disabled}
-				data-hook={dataHook}
 				data-type={type}
 				onMouseEnter={handleMouseEnter}
 				onMouseLeave={handleMouseLeave}
@@ -199,7 +189,6 @@ function Preview(props: PreviewProps) {
 				{status && !inLineMessage && (
 					<StatusIndicator
 						className={classes.statusIndicator}
-						dataHook={dataHooks.statusInside}
 						message={statusContent}
 						status={status}
 						tooltipPlacement="top"
@@ -215,7 +204,6 @@ function Preview(props: PreviewProps) {
 						<Text
 							light
 							className={classes.textLabel}
-							dataHook={dataHooks.labelPreivew}
 						>
 							{label}
 						</Text>
@@ -242,17 +230,14 @@ function Preview(props: PreviewProps) {
 					{status === "error" && (
 						<IconStatusAlertFilled
 							className={classes.errorIcon}
-							data-hook={dataHooks.statusErrorOutside}
 						/>
 					)}
 					{status === "warning" && (
 						<IconStatusWarningFilled
 							className={classes.warningIcon}
-							data-hook={dataHooks.statusWarningOutside}
 						/>
 					)}
 					<Text
-						dataHook={dataHooks.inLineMessage}
 						skin={status === "error" ? "error" : undefined}
 					>
 						{inLineMessage}

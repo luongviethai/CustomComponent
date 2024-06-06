@@ -12,7 +12,6 @@ import { Box, TextButton, Tooltip } from "@wix/design-system";
 
 import { hightlightColors as hightlightColorsSample, presets } from "./colors";
 import {
-	dataHooks,
 	FIELD_CODE,
 	FIELD_GROUP_ID,
 	FIELD_ID,
@@ -383,7 +382,6 @@ function Color(props: ColorPickerProps) {
 						}
 						addTitle={"Add Color"}
 						className={classes.previewWraper}
-						dataHook={dataHooks.preview}
 						disabled={disabled}
 						id={previewProps?.id}
 						onClickCanvas={() => setShowPicker(true)}
@@ -401,7 +399,6 @@ function Color(props: ColorPickerProps) {
 					<div className={classes.currentColorWrapper}>
 						<div
 							className={classes.currentColor}
-							data-hook={dataHooks.currentColor}
 							onClick={handleTogglePicker}
 						>
 							<Tooltip
@@ -416,7 +413,6 @@ function Color(props: ColorPickerProps) {
 									disabled
 								}
 								appendTo="window"
-								dataHook={dataHooks.titleCurrentValueCode}
 							>
 								<div
 									style={{
@@ -426,7 +422,6 @@ function Color(props: ColorPickerProps) {
 												: _.get(valueExactlyColor.current, FIELD_CODE),
 									}}
 									className={classes.currentColorOverlay}
-									data-hook={dataHooks.backgroundCurrentColor}
 									data-type="div-current-color"
 								/>
 							</Tooltip>
@@ -440,7 +435,6 @@ function Color(props: ColorPickerProps) {
 									!_.isUndefined(activedGroup) &&
 									!_.isEmpty(activedGroup.colors),
 							})}
-							dataHook={dataHooks.showMoreGroup}
 							disabled={disabled}
 							size="small"
 							skin="dark"
@@ -472,7 +466,6 @@ function Color(props: ColorPickerProps) {
 										? hightlightColors
 										: hightlightColorsSample
 								}
-								dataHook={dataHooks.hightlightColor}
 								disabled={disabled}
 								handleChangeSelected={handleChangeSelected}
 								selectedId={valueSelected.current ? "" : selectedId}
@@ -496,7 +489,6 @@ function Color(props: ColorPickerProps) {
 							{showPalette && activedGroup && (
 								<Swatches
 									colors={activedGroup.colors}
-									dataHook={dataHooks.groupColor}
 									disabled={disabled}
 									handleChangeSelected={handleChangeSelected}
 									selectedId={valueSelected.current ? "" : selectedId}
