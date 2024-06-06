@@ -1,0 +1,21 @@
+.root {
+	-st-states: disabled(boolean);
+}
+
+.root:disabled {
+	border-color: #CFD1DC !important;
+}
+
+.iconsDynamic {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.root:disabled .iconDrag {
+	opacity: 0.3;
+}
+
+.root:disabled .title {
+	color: #ACAFC4;
+}

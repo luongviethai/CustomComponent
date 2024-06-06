@@ -1,0 +1,2180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <link
+            rel="stylesheet"
+            href="https://static.parastorage.com/services/third-party/fonts/Helvetica/fontFace.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madefor.css"
+        />
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+        <script>
+            const defaultConfig = {
+                allCategories: [
+                    {
+                        id: 3,
+                        name: 'Art & Design',
+                        slug: 'art-design',
+                        count: 326,
+                        layouts: null
+                    },
+                    {
+                        id: 9,
+                        name: 'Business',
+                        slug: 'business',
+                        count: 616,
+                        layouts: null
+                    },
+                    {
+                        id: 14,
+                        name: 'Community & Non-Profit',
+                        slug: 'community-non-profit',
+                        count: 82,
+                        layouts: null
+                    },
+                    {
+                        id: 17,
+                        name: 'Education',
+                        slug: 'education',
+                        count: 105,
+                        layouts: null
+                    },
+                    {
+                        id: 20,
+                        name: 'Events',
+                        slug: 'events',
+                        count: 92,
+                        layouts: null
+                    },
+                    {
+                        id: 23,
+                        name: 'Fashion & Beauty',
+                        slug: 'fashion-beauty',
+                        count: 113,
+                        layouts: null
+                    },
+                    {
+                        id: 26,
+                        name: 'Food & Drink',
+                        slug: 'food-drink',
+                        count: 228,
+                        layouts: null
+                    },
+                    {
+                        id: 32,
+                        name: 'Services',
+                        slug: 'services',
+                        count: 787,
+                        layouts: null
+                    },
+                    {
+                        id: 35,
+                        name: 'Health & Fitness',
+                        slug: 'health-fitness',
+                        count: 253,
+                        layouts: null
+                    },
+                    {
+                        id: 41,
+                        name: 'Online Store',
+                        slug: 'online-store',
+                        count: 170,
+                        layouts: null
+                    },
+                    {
+                        id: 48,
+                        name: 'Technology',
+                        slug: 'technology',
+                        count: 179,
+                        layouts: null
+                    },
+                    {
+                        id: 58,
+                        name: 'Simple',
+                        slug: 'simple',
+                        count: 15,
+                        layouts: null
+                    },
+                    {
+                        id: 156,
+                        name: 'Lifestyle',
+                        slug: 'lifestyle',
+                        count: 163,
+                        layouts: null
+                    }
+                ],
+                layouts: [
+                    {
+                        categories: ['Art & Design', 'Business', 'Services'],
+                        categoryIds: [3, 9, 32],
+                        categorySlug: 'art-design',
+                        date: '2017-10-21 00:25:40',
+                        description: '',
+                        id: 47771,
+                        index: 500,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Design Agency About Page',
+                        pack: 'Design Agency',
+                        packId: 4,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-about-2-533x1721.jpg',
+                        shortName: 'About',
+                        slug: 'design-agency-about-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-about-2-254x820.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-about-2-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/art-design/design-agency-about-page'
+                    },
+                    {
+                        categories: ['Art & Design', 'Business', 'Services'],
+                        categoryIds: [3, 9, 32],
+                        categorySlug: 'art-design',
+                        date: '2017-10-21 00:25:48',
+                        description: '',
+                        id: 47773,
+                        index: 501,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Design Agency Blog Page',
+                        pack: 'Design Agency',
+                        packId: 4,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-blog-2-533x915.jpg',
+                        shortName: 'Blog',
+                        slug: 'design-agency-blog-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-blog-2-254x436.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-blog-2-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/art-design/design-agency-blog-page'
+                    },
+                    {
+                        categories: ['Art & Design', 'Business', 'Services'],
+                        categoryIds: [3, 9, 32],
+                        categorySlug: 'art-design',
+                        date: '2017-10-21 00:26:16',
+                        description: '',
+                        id: 47786,
+                        index: 502,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Design Agency Case Study Page',
+                        pack: 'Design Agency',
+                        packId: 4,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-case-study-2-533x2878.jpg',
+                        shortName: 'Case Study',
+                        slug: 'design-agency-case-study-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-case-study-2-254x1371.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-case-study-2-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/art-design/design-agency-case-study-page'
+                    },
+                    {
+                        categories: ['Art & Design', 'Business', 'Services'],
+                        categoryIds: [3, 9, 32],
+                        categorySlug: 'art-design',
+                        date: '2017-10-21 00:27:05',
+                        description: '',
+                        id: 47788,
+                        index: 503,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Design Agency Contact Page',
+                        pack: 'Design Agency',
+                        packId: 4,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/design-agency-contact-533x620.png',
+                        shortName: 'Contact',
+                        slug: 'design-agency-contact-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/design-agency-contact-254x295.png',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/design-agency-contact-116x87.png',
+                        type: 'layout',
+                        url: '/layouts/art-design/design-agency-contact-page'
+                    },
+                    {
+                        categories: ['Art & Design', 'Business', 'Services'],
+                        categoryIds: [3, 9, 32],
+                        categorySlug: 'art-design',
+                        date: '2017-10-21 00:26:26',
+                        description: '',
+                        id: 47790,
+                        index: 504,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Design Agency Home Page',
+                        pack: 'Design Agency',
+                        packId: 4,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-home-2-533x999.jpg',
+                        shortName: 'Home',
+                        slug: 'design-agency-home-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-home-2-254x476.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-home-2-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/art-design/design-agency-home-page'
+                    },
+                    {
+                        categories: ['Art & Design', 'Business', 'Services'],
+                        categoryIds: [3, 9, 32],
+                        categorySlug: 'art-design',
+                        date: '2017-10-21 00:26:38',
+                        description: '',
+                        id: 47799,
+                        index: 505,
+                        isGlobal: false,
+                        isLanding: true,
+                        name: 'Design Agency Landing Page',
+                        pack: 'Design Agency',
+                        packId: 4,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-landing-2-533x2937.jpg',
+                        shortName: 'Landing',
+                        slug: 'design-agency-landing-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-landing-2-254x1400.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-landing-2-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/art-design/design-agency-landing-page'
+                    },
+                    {
+                        categories: ['Art & Design', 'Business', 'Services'],
+                        categoryIds: [3, 9, 32],
+                        categorySlug: 'art-design',
+                        date: '2017-10-21 00:25:33',
+                        description: '',
+                        id: 47770,
+                        index: 506,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Design Agency Portfolio Page',
+                        pack: 'Design Agency',
+                        packId: 4,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-portfolio-2-533x1107.jpg',
+                        shortName: 'Portfolio',
+                        slug: 'design-agency-portfolio-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-portfolio-2-254x528.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-portfolio-2-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/art-design/design-agency-portfolio-page'
+                    },
+                    {
+                        categories: ['Art & Design', 'Business', 'Services'],
+                        categoryIds: [3, 9, 32],
+                        categorySlug: 'art-design',
+                        date: '2017-10-21 00:26:49',
+                        description: '',
+                        id: 47804,
+                        index: 507,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Design Agency Project Page 1',
+                        pack: 'Design Agency',
+                        packId: 4,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-project-1-2-533x846.jpg',
+                        shortName: 'Project 1',
+                        slug: 'design-agency-project-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-project-1-2-254x403.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-project-1-2-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/art-design/design-agency-project-page'
+                    },
+                    {
+                        categories: ['Art & Design', 'Business', 'Services'],
+                        categoryIds: [3, 9, 32],
+                        categorySlug: 'art-design',
+                        date: '2017-10-21 00:26:57',
+                        description: '',
+                        id: 209405,
+                        index: 508,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Design Agency Project Page 2',
+                        pack: 'Design Agency',
+                        packId: 4,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-project-2-2-533x1250.jpg',
+                        shortName: 'Project 2',
+                        slug: 'design-agency-project-page-2',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-project-2-2-254x595.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-project-2-2-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/art-design/design-agency-project-page-2'
+                    },
+                    {
+                        categories: ['Business'],
+                        categoryIds: [9],
+                        categorySlug: 'business',
+                        date: '2017-10-10 19:08:30',
+                        description: '',
+                        id: 46491,
+                        index: 38,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Agency About Page',
+                        pack: 'Agency',
+                        packId: 10,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/business-about-533x1307.jpg',
+                        shortName: 'About',
+                        slug: 'agency-about-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/business-about-254x623.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/business-about-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/business/agency-about-page'
+                    },
+                    {
+                        categories: ['Business'],
+                        categoryIds: [9],
+                        categorySlug: 'business',
+                        date: '2017-10-10 19:08:22',
+                        description: '',
+                        id: 46490,
+                        index: 39,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Agency Blog Page',
+                        pack: 'Agency',
+                        packId: 10,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/business-blog-533x1005.jpg',
+                        shortName: 'Blog',
+                        slug: 'agency-blog-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/business-blog-254x479.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/business-blog-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/business/agency-blog-page'
+                    },
+                    {
+                        categories: ['Business'],
+                        categoryIds: [9],
+                        categorySlug: 'business',
+                        date: '2017-10-10 19:08:10',
+                        description: '',
+                        id: 46489,
+                        index: 40,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Agency Contact Page',
+                        pack: 'Agency',
+                        packId: 10,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/10/business-contact-533x633.jpg',
+                        shortName: 'Contact',
+                        slug: 'agency-contact-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/10/business-contact-254x302.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/10/business-contact-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/business/agency-contact-page'
+                    },
+                    {
+                        categories: ['Business'],
+                        categoryIds: [9],
+                        categorySlug: 'business',
+                        date: '2017-10-10 19:07:44',
+                        description: '',
+                        id: 46488,
+                        index: 41,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Agency Home Page',
+                        pack: 'Agency',
+                        packId: 10,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/business-home-533x865.jpg',
+                        shortName: 'Home',
+                        slug: 'agency-home-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/business-home-254x412.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/business-home-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/business/agency-home-page'
+                    },
+                    {
+                        categories: ['Business'],
+                        categoryIds: [9],
+                        categorySlug: 'business',
+                        date: '2017-10-10 19:07:15',
+                        description: '',
+                        id: 46487,
+                        index: 42,
+                        isGlobal: false,
+                        isLanding: true,
+                        name: 'Agency Landing Page',
+                        pack: 'Agency',
+                        packId: 10,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/10/business-landing-1-533x2694.jpg',
+                        shortName: 'Landing',
+                        slug: 'agency-landing-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/10/business-landing-1-254x1284.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/10/business-landing-1-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/business/agency-landing-page'
+                    },
+                    {
+                        categories: ['Business'],
+                        categoryIds: [9],
+                        categorySlug: 'business',
+                        date: '2017-10-10 19:07:08',
+                        description: '',
+                        id: 46486,
+                        index: 43,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Agency Portfolio Page',
+                        pack: 'Agency',
+                        packId: 10,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/10/business-portfolio-533x1068.jpg',
+                        shortName: 'Portfolio',
+                        slug: 'agency-portfolio-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/10/business-portfolio-254x509.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/10/business-portfolio-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/business/agency-portfolio-page'
+                    },
+                    {
+                        categories: ['Business'],
+                        categoryIds: [9],
+                        categorySlug: 'business',
+                        date: '2017-10-10 19:08:59',
+                        description: '',
+                        id: 46492,
+                        index: 44,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Agency Pricing Page',
+                        pack: 'Agency',
+                        packId: 10,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/10/business-pricing-533x1425.jpg',
+                        shortName: 'Pricing',
+                        slug: 'agency-pricing-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/10/business-pricing-254x679.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/10/business-pricing-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/business/agency-pricing-page'
+                    },
+                    {
+                        categories: ['Business', 'Services'],
+                        categoryIds: [9, 32],
+                        categorySlug: 'business',
+                        date: '2017-11-30 05:28:12',
+                        description: '',
+                        id: 208899,
+                        index: 1775,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Travel Agency About Page',
+                        pack: 'Travel Agency',
+                        packId: 12,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/11/travel_about-533x2050.jpg',
+                        shortName: 'About',
+                        slug: 'travel-agency-about-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/11/travel_about-254x977.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/11/travel_about-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/business/travel-agency-about-page'
+                    },
+                    {
+                        categories: ['Business', 'Services'],
+                        categoryIds: [9, 32],
+                        categorySlug: 'business',
+                        date: '2017-11-30 05:31:24',
+                        description: '',
+                        id: 208926,
+                        index: 1776,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Travel Agency Blog Page',
+                        pack: 'Travel Agency',
+                        packId: 12,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/travel_blog-533x824.jpg',
+                        shortName: 'Blog',
+                        slug: 'travel-agency-blog-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/travel_blog-254x393.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/travel_blog-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/business/travel-agency-blog-page'
+                    },
+                    {
+                        categories: ['Business', 'Services'],
+                        categoryIds: [9, 32],
+                        categorySlug: 'business',
+                        date: '2017-11-30 05:29:30',
+                        description: '',
+                        id: 208930,
+                        index: 1777,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Travel Agency Contact Page',
+                        pack: 'Travel Agency',
+                        packId: 12,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/travel_contact-533x885.jpg',
+                        shortName: 'Contact',
+                        slug: 'travel-agency-contact-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/travel_contact-254x422.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/travel_contact-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/business/travel-agency-contact-page'
+                    },
+                    {
+                        categories: ['Business', 'Services'],
+                        categoryIds: [9, 32],
+                        categorySlug: 'business',
+                        date: '2017-11-30 05:30:01',
+                        description: '',
+                        id: 208936,
+                        index: 1778,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Travel Agency Home Page',
+                        pack: 'Travel Agency',
+                        packId: 12,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/travel_home-533x1016.jpg',
+                        shortName: 'Home',
+                        slug: 'travel-agency-home-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/travel_home-254x484.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/travel_home-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/business/travel-agency-home-page'
+                    },
+                    {
+                        categories: ['Business', 'Services'],
+                        categoryIds: [9, 32],
+                        categorySlug: 'business',
+                        date: '2017-11-30 05:29:03',
+                        description: '',
+                        id: 208907,
+                        index: 1779,
+                        isGlobal: false,
+                        isLanding: true,
+                        name: 'Travel Agency Landing Page',
+                        pack: 'Travel Agency',
+                        packId: 12,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/travel_landing-533x2883.jpg',
+                        shortName: 'Landing',
+                        slug: 'travel-agency-landing-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/travel_landing-1-254x1374.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/travel_landing-1-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/business/travel-agency-landing-page'
+                    },
+                    {
+                        categories: ['Business', 'Services'],
+                        categoryIds: [9, 32],
+                        categorySlug: 'business',
+                        date: '2017-11-30 05:31:00',
+                        description: '',
+                        id: 208922,
+                        index: 1780,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Travel Agency Packages Page',
+                        pack: 'Travel Agency',
+                        packId: 12,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/travel_packages-533x975.jpg',
+                        shortName: 'Packages',
+                        slug: 'travel-agency-packages-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/travel_packages-254x465.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/travel_packages-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/business/travel-agency-packages-page'
+                    },
+                    {
+                        categories: ['Business', 'Services'],
+                        categoryIds: [9, 32],
+                        categorySlug: 'business',
+                        date: '2017-11-30 05:31:48',
+                        description: '',
+                        id: 208948,
+                        index: 1781,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Travel Agency Shop Page',
+                        pack: 'Travel Agency',
+                        packId: 12,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/11/travel_shop-533x625.jpg',
+                        shortName: 'Shop',
+                        slug: 'travel-agency-shop-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/11/travel_shop-254x298.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/11/travel_shop-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/business/travel-agency-shop-page'
+                    },
+                    {
+                        categories: ['Business', 'Services'],
+                        categoryIds: [9, 32],
+                        categorySlug: 'business',
+                        date: '2017-11-30 05:30:34',
+                        description: '',
+                        id: 208916,
+                        index: 1782,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Travel Agency Team Page',
+                        pack: 'Travel Agency',
+                        packId: 12,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/travel_team-533x1318.jpg',
+                        shortName: 'Team',
+                        slug: 'travel-agency-team-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/travel_team-254x628.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/travel_team-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/business/travel-agency-team-page'
+                    },
+                    {
+                        categories: ['Business', 'Community & Non-Profit', 'Food & Drink'],
+                        categoryIds: [9, 14, 26],
+                        categorySlug: 'business',
+                        date: '2017-11-02 22:07:56',
+                        description: '',
+                        id: 48959,
+                        index: 726,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Farmers Market About Page',
+                        pack: 'Farmers Market',
+                        packId: 15,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-about-533x1191.jpg',
+                        shortName: 'About',
+                        slug: 'farmers-market-about-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-about-254x568.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-about-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/community-non-profit/farmers-market-about-page'
+                    },
+                    {
+                        categories: ['Business', 'Community & Non-Profit', 'Food & Drink'],
+                        categoryIds: [9, 14, 26],
+                        categorySlug: 'business',
+                        date: '2017-11-02 22:07:18',
+                        description: '',
+                        id: 48954,
+                        index: 727,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Farmers Market Blog Page',
+                        pack: 'Farmers Market',
+                        packId: 15,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-blog-533x948.jpg',
+                        shortName: 'Blog',
+                        slug: 'farmers-market-blog-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-blog-254x452.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-blog-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/community-non-profit/farmers-market-blog-page'
+                    },
+                    {
+                        categories: ['Business', 'Community & Non-Profit', 'Food & Drink'],
+                        categoryIds: [9, 14, 26],
+                        categorySlug: 'business',
+                        date: '2017-11-02 22:07:46',
+                        description: '',
+                        id: 48957,
+                        index: 728,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Farmers Market Contact Page',
+                        pack: 'Farmers Market',
+                        packId: 15,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-contact-533x929.jpg',
+                        shortName: 'Contact',
+                        slug: 'farmers-market-contact-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-contact-254x443.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-contact-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/community-non-profit/farmers-market-contact-page'
+                    },
+                    {
+                        categories: ['Business', 'Community & Non-Profit', 'Food & Drink'],
+                        categoryIds: [9, 14, 26],
+                        categorySlug: 'business',
+                        date: '2017-11-02 22:07:51',
+                        description: '',
+                        id: 48958,
+                        index: 729,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Farmers Market Donate Page',
+                        pack: 'Farmers Market',
+                        packId: 15,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-donate-533x1531.jpg',
+                        shortName: 'Donate',
+                        slug: 'farmers-market-donate-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-donate-254x730.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-donate-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/community-non-profit/farmers-market-donate-page'
+                    },
+                    {
+                        categories: ['Business', 'Community & Non-Profit', 'Food & Drink'],
+                        categoryIds: [9, 14, 26],
+                        categorySlug: 'business',
+                        date: '2017-11-02 22:07:41',
+                        description: '',
+                        id: 48956,
+                        index: 730,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Farmers Market Events Page',
+                        pack: 'Farmers Market',
+                        packId: 15,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-events-533x961.jpg',
+                        shortName: 'Events',
+                        slug: 'farmers-market-events-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-events-254x458.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-events-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/community-non-profit/farmers-market-events-page'
+                    },
+                    {
+                        categories: ['Business', 'Community & Non-Profit', 'Food & Drink'],
+                        categoryIds: [9, 14, 26],
+                        categorySlug: 'business',
+                        date: '2017-11-02 22:08:02',
+                        description: '',
+                        id: 48960,
+                        index: 731,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Farmers Market Home Page',
+                        pack: 'Farmers Market',
+                        packId: 15,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-home-533x948.jpg',
+                        shortName: 'Home',
+                        slug: 'farmers-market-home-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-home-254x452.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-home-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/community-non-profit/farmers-market-home-page'
+                    },
+                    {
+                        categories: ['Business', 'Community & Non-Profit', 'Food & Drink'],
+                        categoryIds: [9, 14, 26],
+                        categorySlug: 'business',
+                        date: '2017-11-02 22:08:08',
+                        description: '',
+                        id: 48961,
+                        index: 732,
+                        isGlobal: false,
+                        isLanding: true,
+                        name: 'Farmers Market Landing Page',
+                        pack: 'Farmers Market',
+                        packId: 15,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-landing-533x2594.jpg',
+                        shortName: 'Landing',
+                        slug: 'farmers-market-landing-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-landing-254x1236.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-landing-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/community-non-profit/farmers-market-landing-page'
+                    },
+                    {
+                        categories: ['Business', 'Community & Non-Profit', 'Food & Drink'],
+                        categoryIds: [9, 14, 26],
+                        categorySlug: 'business',
+                        date: '2017-11-02 22:07:36',
+                        description: '',
+                        id: 48955,
+                        index: 733,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Farmers Market Market Page',
+                        pack: 'Farmers Market',
+                        packId: 15,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-market-533x1724.jpg',
+                        shortName: 'Market',
+                        slug: 'farmers-market-market-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-market-254x821.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-market-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/community-non-profit/farmers-market-market-page'
+                    },
+                    {
+                        categories: ['Education'],
+                        categoryIds: [17],
+                        categorySlug: 'education',
+                        date: '2017-10-16 09:16:12',
+                        description: '',
+                        id: 47100,
+                        index: 1137,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'LMS About Page',
+                        pack: 'Learning Management (LMS)',
+                        packId: 18,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_about-533x2300.jpg',
+                        shortName: 'About',
+                        slug: 'lms-about-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_about-254x1096.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_about-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/education/lms-about-page'
+                    },
+                    {
+                        categories: ['Education'],
+                        categoryIds: [17],
+                        categorySlug: 'education',
+                        date: '2017-10-16 09:16:18',
+                        description: '',
+                        id: 47101,
+                        index: 1138,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'LMS Blog Page',
+                        pack: 'Learning Management (LMS)',
+                        packId: 18,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_blog-533x1679.jpg',
+                        shortName: 'Blog',
+                        slug: 'lms-blog-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_blog-254x800.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_blog-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/education/lms-blog-page'
+                    },
+                    {
+                        categories: ['Education'],
+                        categoryIds: [17],
+                        categorySlug: 'education',
+                        date: '2017-10-16 09:16:24',
+                        description: '',
+                        id: 47102,
+                        index: 1139,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'LMS Contact Page',
+                        pack: 'Learning Management (LMS)',
+                        packId: 18,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_contact-533x1240.jpg',
+                        shortName: 'Contact',
+                        slug: 'lms-contact-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_contact-254x591.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_contact-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/education/lms-contact-page'
+                    },
+                    {
+                        categories: ['Education'],
+                        categoryIds: [17],
+                        categorySlug: 'education',
+                        date: '2017-10-16 09:16:33',
+                        description: '',
+                        id: 47103,
+                        index: 1140,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'LMS Course Page',
+                        pack: 'Learning Management (LMS)',
+                        packId: 18,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_course-533x1060.jpg',
+                        shortName: 'Course',
+                        slug: 'lms-course-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_course-254x505.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_course-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/education/lms-course-page'
+                    },
+                    {
+                        categories: ['Education'],
+                        categoryIds: [17],
+                        categorySlug: 'education',
+                        date: '2017-10-16 09:16:42',
+                        description: '',
+                        id: 47104,
+                        index: 1141,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'LMS Courses Page',
+                        pack: 'Learning Management (LMS)',
+                        packId: 18,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_courses-533x864.jpg',
+                        shortName: 'Courses',
+                        slug: 'lms-courses-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_courses-254x412.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_courses-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/education/lms-courses-page'
+                    },
+                    {
+                        categories: ['Education'],
+                        categoryIds: [17],
+                        categorySlug: 'education',
+                        date: '2017-10-16 09:16:48',
+                        description: '',
+                        id: 47105,
+                        index: 1142,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'LMS Home Page',
+                        pack: 'Learning Management (LMS)',
+                        packId: 18,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_home-533x1029.jpg',
+                        shortName: 'Home',
+                        slug: 'lms-home-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_home-254x491.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_home-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/education/lms-home-page'
+                    },
+                    {
+                        categories: ['Education'],
+                        categoryIds: [17],
+                        categorySlug: 'education',
+                        date: '2017-10-16 09:16:54',
+                        description: '',
+                        id: 47106,
+                        index: 1143,
+                        isGlobal: false,
+                        isLanding: true,
+                        name: 'LMS Landing Page',
+                        pack: 'Learning Management (LMS)',
+                        packId: 18,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_landing-533x2406.jpg',
+                        shortName: 'Landing',
+                        slug: 'lms-landing-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_landing-254x1147.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_landing-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/education/lms-landing-page'
+                    },
+                    {
+                        categories: ['Education'],
+                        categoryIds: [17],
+                        categorySlug: 'education',
+                        date: '2017-10-16 09:17:00',
+                        description: '',
+                        id: 47107,
+                        index: 1144,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'LMS Marketing Page',
+                        pack: 'Learning Management (LMS)',
+                        packId: 18,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_marketing-533x1591.jpg',
+                        shortName: 'Marketing',
+                        slug: 'lms-marketing-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_marketing-254x758.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_marketing-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/education/lms-marketing-page'
+                    },
+                    {
+                        categories: ['Education'],
+                        categoryIds: [17],
+                        categorySlug: 'education',
+                        date: '2017-10-16 09:17:06',
+                        description: '',
+                        id: 47108,
+                        index: 1145,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'LMS Pricing Page',
+                        pack: 'Learning Management (LMS)',
+                        packId: 18,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_pricing-533x1697.jpg',
+                        shortName: 'Pricing',
+                        slug: 'lms-pricing-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_pricing-254x809.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_pricing-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/education/lms-pricing-page'
+                    },
+                    {
+                        categories: ['Events'],
+                        categoryIds: [20],
+                        categorySlug: 'events',
+                        date: '2017-11-29 15:51:38',
+                        description: '',
+                        id: 208861,
+                        index: 1865,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Wedding About Page',
+                        pack: 'Wedding',
+                        packId: 21,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/11/Wedding_Our-Story-533x1919.jpg',
+                        shortName: 'About',
+                        slug: 'wedding-about-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/11/Wedding_Our-Story-254x915.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/11/Wedding_Our-Story-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/events/wedding-about-page'
+                    },
+                    {
+                        categories: ['Events'],
+                        categoryIds: [20],
+                        categorySlug: 'events',
+                        date: '2017-11-29 15:53:54',
+                        description: '',
+                        id: 208881,
+                        index: 1866,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Wedding Blog Page',
+                        pack: 'Wedding',
+                        packId: 21,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/11/Wedding_Blog-533x598.jpg',
+                        shortName: 'Blog',
+                        slug: 'wedding-blog-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/11/Wedding_Blog-254x285.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/11/Wedding_Blog-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/events/wedding-blog-page'
+                    },
+                    {
+                        categories: ['Events'],
+                        categoryIds: [20],
+                        categorySlug: 'events',
+                        date: '2017-11-29 15:53:30',
+                        description: '',
+                        id: 208879,
+                        index: 1867,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Wedding Contact Page',
+                        pack: 'Wedding',
+                        packId: 21,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/wedding_contact-533x688.jpg',
+                        shortName: 'Contact',
+                        slug: 'wedding-contact-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/wedding_contact-254x328.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/wedding_contact-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/events/wedding-contact-page'
+                    },
+                    {
+                        categories: ['Events'],
+                        categoryIds: [20],
+                        categorySlug: 'events',
+                        date: '2017-11-29 15:53:05',
+                        description: '',
+                        id: 208877,
+                        index: 1868,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Wedding Details Page',
+                        pack: 'Wedding',
+                        packId: 21,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/wedding_details-533x1338.jpg',
+                        shortName: 'Details',
+                        slug: 'wedding-details-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/wedding_details-254x638.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/wedding_details-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/events/wedding-details-page'
+                    },
+                    {
+                        categories: ['Events'],
+                        categoryIds: [20],
+                        categorySlug: 'events',
+                        date: '2017-11-29 15:52:08',
+                        description: '',
+                        id: 208864,
+                        index: 1877,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Wedding Gallery Page',
+                        pack: 'Wedding',
+                        packId: 21,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/11/Wedding_Gallery-533x846.jpg',
+                        shortName: 'Gallery',
+                        slug: 'wedding-gallery-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/11/Wedding_Gallery-254x403.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/11/Wedding_Gallery-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/events/wedding-gallery-page'
+                    },
+                    {
+                        categories: ['Events'],
+                        categoryIds: [20],
+                        categorySlug: 'events',
+                        date: '2017-11-29 15:52:38',
+                        description: '',
+                        id: 208875,
+                        index: 1878,
+                        isGlobal: false,
+                        isLanding: true,
+                        name: 'Wedding Home Page',
+                        pack: 'Wedding',
+                        packId: 21,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/wedding_landing-533x3182.jpg',
+                        shortName: 'Home',
+                        slug: 'wedding-home-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/wedding_landing-254x1516.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/wedding_landing-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/events/wedding-home-page'
+                    },
+                    {
+                        categories: ['Art & Design', 'Fashion & Beauty', 'Online Store'],
+                        categoryIds: [3, 23, 41],
+                        categorySlug: 'art-design',
+                        date: '2017-10-26 02:15:42',
+                        description: '',
+                        id: 48169,
+                        index: 734,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Fashion About Page',
+                        pack: 'Fashion',
+                        packId: 24,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-about-533x1127.jpg',
+                        shortName: 'About',
+                        slug: 'fashion-about-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-about-254x537.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-about-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/fashion-beauty/fashion-about-page'
+                    },
+                    {
+                        categories: ['Art & Design', 'Fashion & Beauty', 'Online Store'],
+                        categoryIds: [3, 23, 41],
+                        categorySlug: 'art-design',
+                        date: '2017-10-26 02:16:12',
+                        description: '',
+                        id: 48173,
+                        index: 735,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Fashion Blog Page',
+                        pack: 'Fashion',
+                        packId: 24,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-blog-533x915.jpg',
+                        shortName: 'Blog',
+                        slug: 'fashion-blog-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-blog-254x436.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-blog-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/fashion-beauty/fashion-blog-page'
+                    },
+                    {
+                        categories: ['Art & Design', 'Fashion & Beauty', 'Online Store'],
+                        categoryIds: [3, 23, 41],
+                        categorySlug: 'art-design',
+                        date: '2017-10-26 02:15:50',
+                        description: '',
+                        id: 48170,
+                        index: 736,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Fashion Contact Page',
+                        pack: 'Fashion',
+                        packId: 24,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-contact-533x719.jpg',
+                        shortName: 'Contact',
+                        slug: 'fashion-contact-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-contact-254x343.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-contact-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/fashion-beauty/fashion-contact-page'
+                    },
+                    {
+                        categories: ['Art & Design', 'Fashion & Beauty', 'Online Store'],
+                        categoryIds: [3, 23, 41],
+                        categorySlug: 'art-design',
+                        date: '2017-11-07 22:10:05',
+                        description: '',
+                        id: 49104,
+                        index: 743,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Fashion Designer Page',
+                        pack: 'Fashion',
+                        packId: 24,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-designer-533x828.jpg',
+                        shortName: 'Designer',
+                        slug: 'fashion-designer-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-designer-254x394.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-designer-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/fashion-beauty/fashion-designer-page'
+                    },
+                    {
+                        categories: ['Art & Design', 'Fashion & Beauty', 'Online Store'],
+                        categoryIds: [3, 23, 41],
+                        categorySlug: 'art-design',
+                        date: '2017-10-26 02:16:24',
+                        description: '',
+                        id: 48174,
+                        index: 745,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Fashion Gallery Page',
+                        pack: 'Fashion',
+                        packId: 24,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-gallery-533x894.jpg',
+                        shortName: 'Gallery',
+                        slug: 'fashion-gallery-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-gallery-254x426.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-gallery-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/fashion-beauty/fashion-gallery-page'
+                    },
+                    {
+                        categories: ['Art & Design', 'Fashion & Beauty', 'Online Store'],
+                        categoryIds: [3, 23, 41],
+                        categorySlug: 'art-design',
+                        date: '2017-10-26 02:15:33',
+                        description: '',
+                        id: 48168,
+                        index: 746,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Fashion Home Page',
+                        pack: 'Fashion',
+                        packId: 24,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-home-533x753.jpg',
+                        shortName: 'Home',
+                        slug: 'fashion-home-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-home-254x359.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-home-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/fashion-beauty/fashion-home-page'
+                    },
+                    {
+                        categories: ['Art & Design', 'Fashion & Beauty', 'Online Store'],
+                        categoryIds: [3, 23, 41],
+                        categorySlug: 'art-design',
+                        date: '2017-10-26 02:15:24',
+                        description: '',
+                        id: 48167,
+                        index: 747,
+                        isGlobal: false,
+                        isLanding: true,
+                        name: 'Fashion Landing Page',
+                        pack: 'Fashion',
+                        packId: 24,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-landing-533x2328.jpg',
+                        shortName: 'Landing',
+                        slug: 'fashion-landing-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-landing-254x1109.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-landing-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/fashion-beauty/fashion-landing-page'
+                    },
+                    {
+                        categories: ['Art & Design', 'Fashion & Beauty', 'Online Store'],
+                        categoryIds: [3, 23, 41],
+                        categorySlug: 'art-design',
+                        date: '2017-10-26 02:16:05',
+                        description: '',
+                        id: 48172,
+                        index: 748,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Fashion Shop Page',
+                        pack: 'Fashion',
+                        packId: 24,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-shop-533x1212.jpg',
+                        shortName: 'Shop',
+                        slug: 'fashion-shop-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-shop-254x578.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-shop-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/fashion-beauty/fashion-shop-page'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink'],
+                        categoryIds: [9, 26],
+                        categorySlug: 'business',
+                        date: '2017-10-30 20:47:38',
+                        description: '',
+                        id: 48507,
+                        index: 372,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Coffee Shop About Page',
+                        pack: 'Coffee Shop',
+                        packId: 27,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-about-533x2170.jpg',
+                        shortName: 'About',
+                        slug: 'coffee-shop-about-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-about-254x1034.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-about-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/food-drink/coffee-shop-about-page'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink'],
+                        categoryIds: [9, 26],
+                        categorySlug: 'business',
+                        date: '2017-10-30 20:47:45',
+                        description: '',
+                        id: 48508,
+                        index: 373,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Coffee Shop Blog Page',
+                        pack: 'Coffee Shop',
+                        packId: 27,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-blog-533x858.jpg',
+                        shortName: 'Blog',
+                        slug: 'coffee-shop-blog-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-blog-254x409.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-blog-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/food-drink/coffee-shop-blog-page'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink'],
+                        categoryIds: [9, 26],
+                        categorySlug: 'business',
+                        date: '2017-10-30 20:51:14',
+                        description: '',
+                        id: 48527,
+                        index: 374,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Coffee Shop Contact Page',
+                        pack: 'Coffee Shop',
+                        packId: 27,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-contact-533x603.jpg',
+                        shortName: 'Contact',
+                        slug: 'coffee-shop-contact-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-contact-254x287.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-contact-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/food-drink/coffee-shop-contact-page'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink'],
+                        categoryIds: [9, 26],
+                        categorySlug: 'business',
+                        date: '2017-10-30 20:47:58',
+                        description: '',
+                        id: 48510,
+                        index: 375,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Coffee Shop Guide Page',
+                        pack: 'Coffee Shop',
+                        packId: 27,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-brew-guide-533x2025.jpg',
+                        shortName: 'Guide',
+                        slug: 'coffee-shop-guide-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-brew-guide-254x965.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-brew-guide-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/food-drink/coffee-shop-guide-page'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink'],
+                        categoryIds: [9, 26],
+                        categorySlug: 'business',
+                        date: '2017-10-30 20:48:10',
+                        description: '',
+                        id: 48511,
+                        index: 376,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Coffee Shop Home Page',
+                        pack: 'Coffee Shop',
+                        packId: 27,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-home-533x1047.jpg',
+                        shortName: 'Home',
+                        slug: 'coffee-shop-home-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-home-254x499.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-home-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/food-drink/coffee-shop-home-page'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink'],
+                        categoryIds: [9, 26],
+                        categorySlug: 'business',
+                        date: '2017-10-30 20:48:16',
+                        description: '',
+                        id: 48512,
+                        index: 377,
+                        isGlobal: false,
+                        isLanding: true,
+                        name: 'Coffee Shop Landing Page',
+                        pack: 'Coffee Shop',
+                        packId: 27,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-landing-533x2367.jpg',
+                        shortName: 'Landing',
+                        slug: 'coffee-shop-landing-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-landing-254x1128.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-landing-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/food-drink/coffee-shop-landing-page'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink'],
+                        categoryIds: [9, 26],
+                        categorySlug: 'business',
+                        date: '2017-10-30 20:48:23',
+                        description: '',
+                        id: 48513,
+                        index: 378,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Coffee Shop Menu Page',
+                        pack: 'Coffee Shop',
+                        packId: 27,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-menu-533x1426.jpg',
+                        shortName: 'Menu',
+                        slug: 'coffee-shop-menu-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-menu-254x680.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-menu-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/food-drink/coffee-shop-menu-page'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink'],
+                        categoryIds: [9, 26],
+                        categorySlug: 'business',
+                        date: '2017-10-30 20:48:28',
+                        description: '',
+                        id: 48514,
+                        index: 379,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Coffee Shop Shop Page',
+                        pack: 'Coffee Shop',
+                        packId: 27,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-shop-533x1243.jpg',
+                        shortName: 'Shop',
+                        slug: 'coffee-shop-shop-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-shop-254x592.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-shop-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/food-drink/coffee-shop-shop-page'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink', 'Services'],
+                        categoryIds: [9, 26, 32],
+                        categorySlug: 'business',
+                        date: '2017-10-04 19:15:46',
+                        description: '',
+                        id: 30243,
+                        index: 1547,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Restaurant About Page',
+                        pack: 'Restaurant',
+                        packId: 31,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-about-533x1586.jpg',
+                        shortName: 'About',
+                        slug: 'restaurant-about-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-about-254x756.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-about-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/food-drink/restaurant-about-page'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink', 'Services'],
+                        categoryIds: [9, 26, 32],
+                        categorySlug: 'business',
+                        date: '2017-10-04 18:58:39',
+                        description: '',
+                        id: 30228,
+                        index: 1548,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Restaurant Blog Page',
+                        pack: 'Restaurant',
+                        packId: 31,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-blog-533x884.jpg',
+                        shortName: 'Blog',
+                        slug: 'restaurant-blog-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-blog-254x421.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-blog-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/food-drink/restaurant-blog-page'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink', 'Services'],
+                        categoryIds: [9, 26, 32],
+                        categorySlug: 'business',
+                        date: '2017-10-04 06:17:46',
+                        description: '',
+                        id: 30217,
+                        index: 1549,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Restaurant Contact Page',
+                        pack: 'Restaurant',
+                        packId: 31,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-contact-533x621.jpg',
+                        shortName: 'Contact',
+                        slug: 'restaurant-contact-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-contact-254x296.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-contact-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/food-drink/restaurant-contact-page'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink', 'Services'],
+                        categoryIds: [9, 26, 32],
+                        categorySlug: 'business',
+                        date: '2017-10-04 06:17:53',
+                        description: '',
+                        id: 30218,
+                        index: 1550,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Restaurant Gallery Page',
+                        pack: 'Restaurant',
+                        packId: 31,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-gallery-533x815.jpg',
+                        shortName: 'Gallery',
+                        slug: 'restaurant-gallery-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-gallery-254x389.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-gallery-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/food-drink/restaurant-gallery-page'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink', 'Services'],
+                        categoryIds: [9, 26, 32],
+                        categorySlug: 'business',
+                        date: '2017-10-04 06:17:26',
+                        description: '',
+                        id: 30214,
+                        index: 1551,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Restaurant Home Page',
+                        pack: 'Restaurant',
+                        packId: 31,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-home-533x989.jpg',
+                        shortName: 'Home',
+                        slug: 'restaurant-home-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-home-254x471.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-home-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/food-drink/restaurant-home-page'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink', 'Services'],
+                        categoryIds: [9, 26, 32],
+                        categorySlug: 'business',
+                        date: '2017-10-04 06:17:01',
+                        description: '',
+                        id: 30213,
+                        index: 1552,
+                        isGlobal: false,
+                        isLanding: true,
+                        name: 'Restaurant Landing Page',
+                        pack: 'Restaurant',
+                        packId: 31,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-landing-533x1781.jpg',
+                        shortName: 'Landing',
+                        slug: 'restaurant-landing-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-landing-254x849.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-landing-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/food-drink/restaurant-landing-page'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink', 'Services'],
+                        categoryIds: [9, 26, 32],
+                        categorySlug: 'business',
+                        date: '2017-10-04 19:20:21',
+                        description: '',
+                        id: 30251,
+                        index: 1553,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Restaurant Shop Page',
+                        pack: 'Restaurant',
+                        packId: 31,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-shop-533x722.jpg',
+                        shortName: 'Shop',
+                        slug: 'restaurant-shop-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-shop-254x344.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-shop-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/food-drink/restaurant-shop-page'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink', 'Services'],
+                        categoryIds: [9, 26, 32],
+                        categorySlug: 'business',
+                        date: '2017-10-04 19:15:55',
+                        description: '',
+                        id: 30244,
+                        index: 1554,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Restaurant Team Page',
+                        pack: 'Restaurant',
+                        packId: 31,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-team-533x1190.jpg',
+                        shortName: 'Team',
+                        slug: 'restaurant-team-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-team-254x567.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-team-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/food-drink/restaurant-team-page'
+                    },
+                    {
+                        categories: ['Business', 'Education', 'Health & Fitness', 'Services'],
+                        categoryIds: [9, 17, 35, 32],
+                        categorySlug: 'business',
+                        date: '2017-11-28 02:57:52',
+                        description: '',
+                        id: 50552,
+                        index: 1923,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Yoga Studio About Page',
+                        pack: 'Yoga Studio',
+                        packId: 36,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-about-533x968.jpg',
+                        shortName: 'About',
+                        slug: 'yoga-studio-about-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-about-254x462.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-about-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/health-fitness/yoga-studio-about-page'
+                    },
+                    {
+                        categories: ['Business', 'Education', 'Health & Fitness', 'Services'],
+                        categoryIds: [9, 17, 35, 32],
+                        categorySlug: 'business',
+                        date: '2017-11-28 02:57:57',
+                        description: '',
+                        id: 50553,
+                        index: 1924,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Yoga Studio Blog Page',
+                        pack: 'Yoga Studio',
+                        packId: 36,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-blog-533x747.jpg',
+                        shortName: 'Blog',
+                        slug: 'yoga-studio-blog-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-blog-254x356.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-blog-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/health-fitness/yoga-studio-blog-page'
+                    },
+                    {
+                        categories: ['Business', 'Education', 'Health & Fitness', 'Services'],
+                        categoryIds: [9, 17, 35, 32],
+                        categorySlug: 'business',
+                        date: '2017-11-28 02:58:04',
+                        description: '',
+                        id: 50554,
+                        index: 1925,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Yoga Studio Classes Page',
+                        pack: 'Yoga Studio',
+                        packId: 36,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-classes-533x776.jpg',
+                        shortName: 'Classes',
+                        slug: 'yoga-studio-classes-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-classes-254x370.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-classes-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/health-fitness/yoga-studio-classes-page'
+                    },
+                    {
+                        categories: ['Business', 'Education', 'Health & Fitness', 'Services'],
+                        categoryIds: [9, 17, 35, 32],
+                        categorySlug: 'business',
+                        date: '2017-11-28 02:58:09',
+                        description: '',
+                        id: 50555,
+                        index: 1926,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Yoga Studio Contact Page',
+                        pack: 'Yoga Studio',
+                        packId: 36,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-contact-533x548.jpg',
+                        shortName: 'Contact',
+                        slug: 'yoga-studio-contact-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-contact-254x261.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-contact-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/health-fitness/yoga-studio-contact-page'
+                    },
+                    {
+                        categories: ['Business', 'Education', 'Health & Fitness', 'Services'],
+                        categoryIds: [9, 17, 35, 32],
+                        categorySlug: 'business',
+                        date: '2017-11-28 02:58:14',
+                        description: '',
+                        id: 50556,
+                        index: 1927,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Yoga Studio Home Page',
+                        pack: 'Yoga Studio',
+                        packId: 36,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-home-533x809.jpg',
+                        shortName: 'Home',
+                        slug: 'yoga-studio-home-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-home-254x385.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-home-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/health-fitness/yoga-studio-home-page'
+                    },
+                    {
+                        categories: ['Business', 'Education', 'Health & Fitness', 'Services'],
+                        categoryIds: [9, 17, 35, 32],
+                        categorySlug: 'business',
+                        date: '2017-11-28 03:21:13',
+                        description: '',
+                        id: 50561,
+                        index: 1928,
+                        isGlobal: false,
+                        isLanding: true,
+                        name: 'Yoga Studio Landing Page',
+                        pack: 'Yoga Studio',
+                        packId: 36,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-landing-533x2251.jpg',
+                        shortName: 'Landing',
+                        slug: 'yoga-studio-landing-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-landing-254x1073.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-landing-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/health-fitness/yoga-studio-landing-page'
+                    },
+                    {
+                        categories: ['Business', 'Education', 'Health & Fitness', 'Services'],
+                        categoryIds: [9, 17, 35, 32],
+                        categorySlug: 'business',
+                        date: '2017-11-28 02:58:24',
+                        description: '',
+                        id: 50558,
+                        index: 1929,
+                        isGlobal: false,
+                        isLanding: false,
+                        name: 'Yoga Studio Team Page',
+                        pack: 'Yoga Studio',
+                        packId: 36,
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-team-533x733.jpg',
+                        shortName: 'Team',
+                        slug: 'yoga-studio-team-page',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-team-254x349.jpg',
+                        thumbnailSmall:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-team-116x87.jpg',
+                        type: 'layout',
+                        url: '/layouts/health-fitness/yoga-studio-team-page'
+                    }
+                ],
+                packs: [
+                    {
+                        categories: ['Art & Design', 'Business', 'Services'],
+                        categoryIds: [3, 9, 32],
+                        categorySlug: 'art-design',
+                        date: '2017-10-21 00:25:40',
+                        description:
+                            'This design agency layout pack will provide your visitors will all the information they need. It’ll also give you the possibility to showcase the most valuable things about your design agency in style.',
+                        id: 4,
+                        landingIndex: 505,
+                        layouts: [500, 501, 502, 503, 504, 505, 506, 507, 508],
+                        name: 'Design Agency',
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-landing-2-533x2937.jpg',
+                        slug: 'design-agency',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/design-agency-landing-2-254x1400.jpg'
+                    },
+                    {
+                        categories: ['Business'],
+                        categoryIds: [9],
+                        categorySlug: 'business',
+                        date: '2017-10-10 19:08:30',
+                        description:
+                            'This business layout pack is designed to provide everything the average business will need out of the box. You will find contact info and a contact form at the footer of every page. The portfolio page and the pricing page (including an FAQ) are both great additions. The landing page includes a fullscreen header with a double CTA along with all those useful elements like featured case studies, a pricing table, an email optin, and testimonials. ',
+                        id: 10,
+                        landingIndex: 42,
+                        layouts: [38, 39, 40, 41, 42, 43, 44],
+                        name: 'Agency',
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/10/business-landing-1-533x2694.jpg',
+                        slug: 'agency',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/10/business-landing-1-254x1284.jpg'
+                    },
+                    {
+                        categories: ['Business', 'Services'],
+                        categoryIds: [9, 32],
+                        categorySlug: 'business',
+                        date: '2017-11-30 05:28:12',
+                        description:
+                            'Overall this layout is designed to look amazing out of the box. One standout feature in this layout pack is the CTA in the Footer on the Homepage. The use of parallax with those striking images are a beautiful combination. A similar effect can be found at the top of the about page. ',
+                        id: 12,
+                        landingIndex: 1779,
+                        layouts: [1775, 1776, 1777, 1778, 1779, 1780, 1781, 1782],
+                        name: 'Travel Agency',
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/travel_landing-533x2883.jpg',
+                        slug: 'travel-agency',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/02/travel_landing-1-254x1374.jpg'
+                    },
+                    {
+                        categories: ['Business', 'Community & Non-Profit', 'Food & Drink'],
+                        categoryIds: [9, 14, 26],
+                        categorySlug: 'business',
+                        date: '2017-11-02 22:07:56',
+                        description:
+                            'While there is a lot to like in this layout pack, we want to draw special attention to two pages: the Events page and the Donate page. For any farmers market (or other non-profit) these pages will be essential to the health and ongoing success of the organization.',
+                        id: 15,
+                        landingIndex: 732,
+                        layouts: [726, 727, 728, 729, 730, 731, 732, 733],
+                        name: 'Farmers Market',
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-landing-533x2594.jpg',
+                        slug: 'farmers-market',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/farmers-market-landing-254x1236.jpg'
+                    },
+                    {
+                        categories: ['Education'],
+                        categoryIds: [17],
+                        categorySlug: 'education',
+                        date: '2017-10-16 09:16:12',
+                        description:
+                            'This layout pack provides you will all of the necessary page layouts for any e-course website. It includes an excellent marketing page to promote your course(s). The courses page displays each course along with its brief description in well designed grid layout, perfect for listing any amount of courses. The CTA at the bottom of each page is also a really smart addition.',
+                        id: 18,
+                        landingIndex: 1143,
+                        layouts: [1137, 1138, 1139, 1140, 1141, 1142, 1143, 1144, 1145],
+                        name: 'Learning Management (LMS)',
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_landing-533x2406.jpg',
+                        slug: 'learning-management-lms',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-school_landing-254x1147.jpg'
+                    },
+                    {
+                        categories: ['Events'],
+                        categoryIds: [20],
+                        categorySlug: 'events',
+                        date: '2017-11-29 15:51:38',
+                        description:
+                            'This Wedding Website Layout Pack is the perfect way to jumpstart your next wedding website. These days, everyone who gets married needs a website, and they expect a very specific aesthetic and some very specific features. This website pack has it all! Included are fully designed pages for: home, about, contact, blog, gallery and details.',
+                        id: 21,
+                        landingIndex: 1878,
+                        layouts: [1865, 1866, 1867, 1868, 1877, 1878],
+                        name: 'Wedding',
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/wedding_landing-533x3182.jpg',
+                        slug: 'wedding',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/wedding_landing-254x1516.jpg'
+                    },
+                    {
+                        categories: ['Art & Design', 'Fashion & Beauty', 'Online Store'],
+                        categoryIds: [3, 23, 41],
+                        categorySlug: 'art-design',
+                        date: '2017-10-26 02:15:42',
+                        description:
+                            'One of my favorite things about this layout is it’s flexibility. Changing the color scheme of the site would be really easy since all of the content areas have a white background. This makes it all the more flexible for your branding needs. I can see this being used by bloggers, small businesses, photographers, you name it.',
+                        id: 24,
+                        landingIndex: 747,
+                        layouts: [734, 735, 736, 743, 745, 746, 747, 748],
+                        name: 'Fashion',
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-landing-533x2328.jpg',
+                        slug: 'fashion',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/fashion-landing-254x1109.jpg'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink'],
+                        categoryIds: [9, 26],
+                        categorySlug: 'business',
+                        date: '2017-10-30 20:47:38',
+                        description:
+                            'This eight-page coffee shop layout pack has everything you could possibly expect from a coffee shop website. Primarily; all of the practical information is continuously present on each layout of the website.',
+                        id: 27,
+                        landingIndex: 377,
+                        layouts: [372, 373, 374, 375, 376, 377, 378, 379],
+                        name: 'Coffee Shop',
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-landing-533x2367.jpg',
+                        slug: 'coffee-shop',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coffee-shop-landing-254x1128.jpg'
+                    },
+                    {
+                        categories: ['Business', 'Food & Drink', 'Services'],
+                        categoryIds: [9, 26, 32],
+                        categorySlug: 'business',
+                        date: '2017-10-04 19:15:46',
+                        description:
+                            'This restaurant layout pack is designed to provide everything the average restaurant will need out of the box. Particularly the all important “hours of operation” information in the footer of every page. There is also a button in the hero section of the home page and the landing page for making a reservation, though you’ll need to install a booking plugin of your own to make that work.',
+                        id: 31,
+                        landingIndex: 1552,
+                        layouts: [1547, 1548, 1549, 1550, 1551, 1552, 1553, 1554],
+                        name: 'Restaurant',
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-landing-533x1781.jpg',
+                        slug: 'restaurant',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/restaurant-landing-254x849.jpg'
+                    },
+                    {
+                        categories: ['Business', 'Education', 'Health & Fitness', 'Services'],
+                        categoryIds: [9, 17, 35, 32],
+                        categorySlug: 'business',
+                        date: '2017-11-28 02:57:52',
+                        description:
+                            'This yoga layout pack has everything a yoga studio could possibly need on their website. Besides having a niche-oriented landing page and home page, the yoga layout pack also offers a unique and attractive classes page that will help your existing students and potential students follow the schedule of your classes on either desktop, tablet or phone.',
+                        id: 36,
+                        landingIndex: 1928,
+                        layouts: [1923, 1924, 1925, 1926, 1927, 1928, 1929],
+                        name: 'Yoga Studio',
+                        screenshot:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-landing-533x2251.jpg',
+                        slug: 'yoga-studio',
+                        thumbnail:
+                            'https://www.elegantthemes.com/layouts/wp-content/uploads/2018/01/yoga-landing-254x1073.jpg'
+                    }
+                ],
+            };
+
+            const initApp = (id, config = {}) => {
+                var body = document.getElementsByTagName('body')[0];
+                var e = new CustomEvent('lb_ready', {
+                    detail: {
+                        ...defaultConfig,
+                        ...config,
+                        rootId: id
+                    }
+                });
+                body.dispatchEvent(e);
+            };
+
+            setTimeout(() => {
+                initApp('root');
+            }, 1000);
+        </script>
+    </body>
+</html>

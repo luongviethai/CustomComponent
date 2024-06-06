@@ -1,0 +1,16 @@
+:vars {
+	B10: #116DFF
+}
+
+.root {
+	-st-states: actived(boolean);
+}
+
+.root:actived svg {
+	color: value(B10);
+}
+
+.root > span {
+	display: flex;
+	align-items: center;
+}

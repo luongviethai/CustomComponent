@@ -1,0 +1,23 @@
+.root {
+    -st-states: disabled;
+    margin-bottom: 12px;
+}
+
+.root:disabled {
+    opacity: 0.5;
+}
+
+.root:disabled :global(.pointer-picker) {
+    cursor: default !important;
+}
+
+.picker {
+    position: relative;
+    transition: opacity .2s ease, transform .2s ease;
+    margin-left: 5px;
+    width: 20px;
+}
+
+.alphaPickerWrapper > div > div:first-child > div {
+    background: #fff url(data:image/gif;base64,R0lGODdhEAAQAPEAAMvLy8zMzP///wAAACwAAAAAEAAQAEACHYxvosstCAEMrq6Jj812Y59NIDQipdY5XLWqH4sVADs=) repeat center !important;
+}

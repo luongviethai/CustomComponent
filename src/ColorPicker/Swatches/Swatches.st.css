@@ -1,0 +1,41 @@
+/* @st-import [defaultScrollBar] from "../../../Foundation/stylable/default-scroll-bar.st.css"; */
+
+:vars {
+    B30: #A8CAFF;
+    B20: #5999FF;
+    B10: #116DFF;
+}
+
+.root {
+    max-height: 271px;
+    padding: 5px;
+    overflow: hidden auto;
+    outline: none;
+}
+
+.root::-webkit-scrollbar {
+    height: 0;
+    width: 18px;
+}
+
+.root::-webkit-scrollbar-button {
+    display: none;
+    height: 6px;
+}
+
+.root::-webkit-scrollbar-thumb {
+    /* https://stackoverflow.com/a/16829330/5343330 */
+    background-color: value(B30);
+    background-clip: content-box;
+    border-radius: calc(5px * 2);
+    border: 5px solid transparent;
+    height: 72px;
+}
+
+.root::-webkit-scrollbar-thumb:hover {
+    background-color: value(B20);
+}
+
+.root::-webkit-scrollbar-thumb:active {
+    background-color: value(B10);
+}

@@ -1,0 +1,44 @@
+.root {
+	position: relative;
+	margin-top: 5px;
+	height: 100%;
+}
+
+.spinnerControl {
+	width: 100%;
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.spinner {
+	overflow: hidden;
+	height: 8px;
+	cursor: ew-resize;
+	visibility: visible;
+	display: block;
+	float: none;
+	opacity: 1;
+	background-image: none;
+	position: absolute;
+	width: 100%;
+}
+
+.spinner::before {
+	content: " ";
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, #fff 0, hsla(0, 0%, 100%, 0) 50%, #fff);
+}
+
+.spinnerItem {
+	width: 10000px;
+	height: 8px;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2IDgiPjxwYXRoIGZpbGw9IiNjNmQwZGIiIGQ9Ik0wIDBoMnY4SDB6Ii8+PC9zdmc+);
+}
+
+.label {}

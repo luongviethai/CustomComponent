@@ -1,0 +1,110 @@
+/* @st-import [visuallyHidden, stretchedLink, pCenter] from '../../mixins.st.css';
+@st-import [B10, D10] from '../../Foundation/stylable/colors.st.css';
+@st-import [speed-medium-1] from '../../Foundation/stylable/easing.st.css';
+@st-import Text from '../../Text/Text.st.css';
+@st-import TextButton from '../../TextButton/TextButton.st.css'; */
+
+:global(html.end-move-picker) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+:global(html.end-move-picker.move-all) {
+    cursor: move;
+}
+
+:global(html.end-move-picker.move-y) {
+    cursor: ns-resize;
+}
+
+.root {
+    -st-states: disabled, previewPicker;
+    position: relative;
+}
+
+.root :global(*) {
+    box-sizing: border-box;
+}
+
+.root:disabled {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.root:previewPicker .pickerWrapper {
+    margin-bottom: 0px;
+}
+
+.root > :global(div > div:nth-child(2)) {
+    justify-content: flex-end;
+}
+
+.root .previewWraper {
+    margin-bottom: 12px;
+}
+
+.currentColor {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAAHnlligAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHJJREFUeNpi+P///4EDBxiAGMgCCCAGFB5AADGCRBgYDh48CCRZIJS9vT2QBAggFBkmBiSAogxFBiCAoHogAKIKAlBUYTELAiAmEtABEECk20G6BOmuIl0CIMBQ/IEMkO0myiSSraaaBhZcbkUOs0HuBwDplz5uFJ3Z4gAAAABJRU5ErkJggg==);
+    background-size: 40%;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    position: relative;
+}
+
+.currentColorOverlay {
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: 0 0 0 5px #fff, 0 2px 12px 5px rgb(0 136 225 / 40%), inset 0 0 5px 0 rgb(0 0 0 / 20%);
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+}
+
+.currentColorOverlay::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    content: " ";
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, .33));
+    background: url(data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgdmlldy1ib3g9IjAgMCAyOCAyOCI+PHBhdGggZD0iTTIyLjQ3IDYuMzNsLS43OS0uNzlhMS41OSAxLjU5IDAgMCAwLTIuMjQtLjEzbC0xLjg3IDEuODctLjc4LS43OWExLjEgMS4xIDAgMCAwLTEuNTYgMGwtLjc1Ljc1YTEuNyAxLjcgMCAwIDAgMCAyLjRMNy45IDE2LjI1YTMuMzkgMy4zOSAwIDAgMC0uOCAxLjU0YzAgLjEyIDAgLjItLjA2LjI4YTMuNyAzLjcgMCAwIDEtMSAxLjc2bC0uNDguNDlhMS4zNyAxLjM3IDAgMCAwLS4yOCAxLjg3bC41Ni41NmEuOTMuOTMgMCAwIDAgLjY2LjI1IDEuNzMgMS43MyAwIDAgMCAxLjE4LS41NGwuNDgtLjQ2YTMuNiAzLjYgMCAwIDEgMS43NC0xbC4zMS0uMDZhMy40MyAzLjQzIDAgMCAwIDEuNTgtLjgxbDYuNTgtNi42YTEuNDYgMS40NiAwIDAgMCAyLjA2IDBsLjg3LS44N2MuMzUtLjQ1LjUyLTEuMTMuMTQtMS41MWwtLjcyLS43MyAxLjg4LTEuODVhMS42IDEuNiAwIDAgMC0uMTMtMi4yNHpNMTAuOTIgMTguNjZhMS44MiAxLjgyIDAgMCAxLS43Ny4zNmgtLjM0Yy0uMTUgMC0uMzIuMDgtLjUuMTRsLS43MS4xNy4yMi0uOTNjMC0uMTMuMDctLjI0LjEtLjM1di0uMTdhMS44NSAxLjg1IDAgMCAxIC4zNy0uNzlMMTYgMTAuNGwxLjYgMS42eiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 70%;
+}
+
+.expandBtn {
+    -st-states: actived(boolean), showPaletteVertival(boolean);
+    flex: 1;
+    position: absolute;
+    margin-left: 6px;
+    margin-top: 7px;
+    transition: transform ease 200ms;
+    transform: rotateZ('0deg');
+}
+
+TextButton.expandBtn:actived {
+    color: #116DFF;
+}
+
+TextButton.expandBtn:showPaletteVertival {
+    transform: rotateZ('90deg');
+}
+
+.root:disabled .currentColor {
+    cursor: default;
+    opacity: 0.5;
+}

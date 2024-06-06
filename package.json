@@ -1,0 +1,103 @@
+{
+  "name": "demo6",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve --open --port 2008",
+    "build": "webpack     --mode production"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.5.1",
+    "@stylable/runtime": "^4.10.3",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.47",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@types/uuid": "^8.3.4",
+    "@wix/design-system": "^1.108.0",
+    "axios": "^1.7.2",
+    "babel-loader": "^8.2.5",
+    "consolidated-events": "^2.0.2",
+    "document.contains": "^1.0.2",
+    "jquery": "^3.7.1",
+    "lodash": "^4.17.21",
+    "lodash-webpack-plugin": "^0.11.6",
+    "object.values": "^1.2.0",
+    "react": "^18.2.0",
+    "react-color": "^2.19.3",
+    "react-dom": "^18.2.0",
+    "react-redux": "^7.2.4",
+    "react-scripts": "5.0.1",
+    "reactcss": "^1.2.3",
+    "redux": "^4.1.0",
+    "style-loader": "^3.3.1",
+    "svg-url-loader": "^8.0.0",
+    "tinycolor2": "^1.6.0",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.7.4",
+    "url-loader": "^4.1.1",
+    "uuid": "^8.3.2",
+    "web-vitals": "^2.1.4",
+    "wix-style-react": "^10.166.0",
+    "wix-ui-icons-common": "^2.0.409"
+  },
+  "devDependencies": {
+    "@babel/cli": "~7.16.8",
+    "@babel/core": "~7.16.12",
+    "@babel/parser": "~7.16.12",
+    "@babel/plugin-transform-runtime": "^7.16.10",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@babel/runtime": "^7.16.7",
+    "@stylable/cli": "^4.10.3",
+    "@stylable/core": "^4.10.3",
+    "@stylable/module-utils": "^4.10.3",
+    "@stylable/node": "^4.10.3",
+    "@stylable/webpack-plugin": "^4.10.3",
+    "@svgr/webpack": "^6.2.0",
+    "@types/consolidated-events": "^2.0.0",
+    "@types/draft-js": "^0.11.9",
+    "@types/jquery": "^3.5.30",
+    "@types/lodash": "^4.14.182",
+    "@types/react": "^17.0.38",
+    "@types/react-color": "^3.0.12",
+    "@types/react-redux": "^7.1.24",
+    "@types/reactcss": "^1.2.12",
+    "@types/tinycolor2": "^1.4.6",
+    "@types/webpack-env": "^1.17.0",
+    "css-loader": "^6.6.0",
+    "cypress": "^10.4.0",
+    "draft-js": "^0.11.7",
+    "html-webpack-plugin": "^5.5.0",
+    "linkify-it": "^4.0.1",
+    "lodash-webpack-plugin": "^0.11.6",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
+    "webpack": "^5.72.0",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

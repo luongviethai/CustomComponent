@@ -1,0 +1,56 @@
+@st-import Spinner from "./Spinner/Spinner.st.css";
+
+:global(html.mb-dragme-noselect) {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+}
+
+:global(html.mb-dragme-noselect.x) {
+	cursor: ew-resize;
+}
+
+.root {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	-st-states: size(enum(small, medium)), spinner, disabled, isDragging;
+}
+
+.root:size(small) {
+	width: 99px;
+}
+
+.root:size(medium) {
+	width: 170px;
+}
+
+.root:disabled {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.spinnerContainer {
+	-st-extends: Spinner;
+}
+
+.root:spinner .spinnerContainer::spinnerControl {
+	opacity: 1;
+	transition: opacity .4s;
+}
+
+.root:spinner .spinnerContainer::label {
+	opacity: 0;
+	transition: opacity .4s;
+}
+
+.root:isDragging .spinnerContainer::spinnerControl {
+	opacity: 1;
+	transition: opacity .4s;
+}

@@ -1,0 +1,33 @@
+.root {
+	-st-states: disabled(boolean), readOnly(boolean);
+}
+
+.link {
+	padding: 4px;
+	background-color: #FFFFFF;
+}
+
+.previewWrapper {
+	flex: 1;
+}
+
+.preview {
+	position: relative;
+	border: 3px solid #116DFF;
+	height: 105px;
+	box-sizing: content-box;
+	background: url("./images/Cross.svg") no-repeat;
+	background-color: #FFFFFF;
+}
+
+.root:disabled .preview {
+	border: 3px solid #000624 rgba(0, 6, 36, 0.20);
+}
+
+.root:readOnly .preview {
+	border: solid 1px #DFE5EB;
+}
+
+.paddingItem {
+	width: 110px;
+}

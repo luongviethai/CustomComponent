@@ -1,0 +1,50 @@
+/* @st-import [B10, D10] from '../../../Foundation/stylable/colors.st.css';
+@st-import TextButton from '../../../TextButton/TextButton.st.css'; */
+/* @st-import TextButton from '@wix/design-system/TextButton/TextButton.st.css'; */
+
+.root {
+	-st-states: disabled;
+	text-align: right;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.tab {
+	-st-states: actived;
+	color: #000624;
+	cursor: pointer;
+	padding: 0 5px;
+}
+
+.tab:hover {
+	color: #116DFF;
+}
+
+.nameGroup {
+	justify-content: flex-end;
+}
+
+/* TextButton.tab:actived {
+	color: #116DFF;
+} */
+
+.activeEdittingBtn {
+	-st-states: actived;
+}
+
+.activeEdittingBtn:actived svg {
+	fill: #116DFF;
+}
+
+.activeEdittingBtn svg {
+	cursor: pointer;
+}
+
+.activeEdittingBtn svg:hover {
+	fill: #116DFF;
+}
+
+.root:disabled .tab,
+.root:disabled .activeEdittingBtn svg {
+	cursor: default;
+}

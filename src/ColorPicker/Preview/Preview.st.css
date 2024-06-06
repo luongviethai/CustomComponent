@@ -1,0 +1,146 @@
+/* @st-import [SP1] from 'mgz-ui/Foundation/stylable/spacing.st.css';
+@st-import [B60, B20,D10-10, B40, R10, Y10, D80, D10-66] from 'mgz-ui/Foundation/stylable/colors.st.css';
+@st-import [flexCenter] from 'mgz-ui/mixins.st.css';
+@st-import IconButton from "mgz-ui/IconButton/IconButton.st.css";
+@st-import MediaOverlay from "mgz-ui/MediaOverlay/MediaOverlay.st.css"; */
+
+:vars {
+	SP1: 3px;
+	B20: #5999FF;
+	R10: #E62214;
+	Y10: #FFB700;
+	B60: #F4F7FF;
+	D80: #FFFFFF;
+	B40: #D6E6FE;
+	D10-66: #000624 rgba(0, 6, 36, 0.66);
+	D10-10: #000624 rgba(0, 6, 36, 0.10);
+}
+
+.root {
+	-st-states: isEmpty(boolean), showOverlay(boolean), type(enum(image, video, color)), disabled, status(enum(error, warning));
+	height: 200px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 3px;
+	z-index: 1;
+	width: 100%;
+	border: 1px solid value(B20);
+	border-radius: value(SP1)
+}
+
+.root:isEmpty {
+	border: dashed 1px value(B20);
+}
+
+.root:status(error) {
+	border: 1px solid value(R10);
+}
+
+.root:status(warning) {
+	border: 1px solid value(Y10);
+}
+
+.root:type(color) .canvas {
+	background-color: value(B60);
+}
+
+.root:isEmpty .canvas {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: value(D80);
+}
+
+.root:isEmpty:disabled {
+	border: dashed 1px value(D10-10);
+}
+
+.root:showOverlay::before {
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, .9), transparent 95%);
+	transform: rotate(35deg);
+	transition: top .2s ease, right .2s ease;
+	z-index: 9;
+}
+
+.root:disabled {
+	border: 1px solid value(B40);
+}
+
+.root:disabled .canvas img,
+.root:disabled .canvas video {
+	opacity: .4;
+}
+
+
+.root video {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+.errorIcon {
+	color: value(R10);
+}
+
+.warningIcon {
+	color: value(Y10);
+}
+
+.canvas {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+	cursor: pointer;
+	height: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.canvas img {
+	max-height: 100%;
+	display: grid;
+	grid-template-columns: repeat(5);
+}
+
+.iconButton {
+	/* -st-extends: IconButton; */
+	border-radius: 6px;
+}
+
+.mediaOverLay {
+	/* -st-extends: MediaOverlay; */
+	border-radius: 0;
+}
+
+.statusIndicator {
+	position: absolute;
+	right: value(SP1);
+	top: value(SP1);
+	z-index: 3;
+}
+
+.inLineMessage {
+	position: absolute;
+	bottom: 20px;
+}
+
+.labelPreview {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 36px;
+	z-index: 2;
+	background: value(D10-66);
+}
+
+.textLabel {
+	overflow: hidden;
+}
