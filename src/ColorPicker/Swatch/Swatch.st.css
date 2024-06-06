@@ -1,11 +1,12 @@
 :vars {
-	swatchSize: 26px
+	swatchSize: 26px;
+	B10: #116DFF;
+	D80: #FFFFFF;
+	D10: #000624;
 }
 
 .root {
 	-st-states: disabled;
-	display: flex;
-	flex-direction: column;
 }
 
 .swatchInner {
@@ -43,7 +44,7 @@
 }
 
 .swatch:selected {
-	box-shadow: 0 0 0 2px hsl(0, 0%, 100%), 0 0 0 3px #116DFF;
+	box-shadow: 0 0 0 2px hsl(0, 0%, 100%), 0 0 0 3px value(B10);
 }
 
 .swatchLabel {
@@ -56,7 +57,7 @@
 	top: 50%;
 	left: 50%;
 	z-index: 1;
-	fill: #FFFFFF;
+	fill: value(D80);
 	pointer-events: none;
 	user-select: none;
 }
@@ -65,11 +66,11 @@
 	cursor: pointer;
 	margin-top: 3px;
 	user-select: none;
-	color: #116DFF;
+	color: value(D10);
 }
 
 .swatchDeleteBtn:hover {
-	color: #116DFF;
+	color: value(B10);
 }
 
 .root:disabled .swatchInner,

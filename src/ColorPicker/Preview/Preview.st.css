@@ -117,7 +117,7 @@
 
 .mediaOverLay {
 	/* -st-extends: MediaOverlay; */
-	border-radius: 0;
+	border-radius: 0 !important;
 }
 
 .statusIndicator {
