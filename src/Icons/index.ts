@@ -5,3 +5,8 @@ export { default as IconDrag } from "./IconDrag";
 export { default as IconRevertReset } from "./IconRevertReset";
 export { default as IconStatusAlertFilled } from "./IconStatusAlertFilled";
 export { default as IconStatusWarningFilled } from "./IconStatusWarningFilled";
+export { default as IconCircleLoaderCheck } from "./IconCircleLoaderCheck";
+export { default as IconCircleLoaderCheckSmall } from "./IconCircleLoaderCheckSmall";
+export { default as IconFormFieldError } from "./IconFormFieldError";
+export { default as IconFormFieldErrorSmall } from "./IconFormFieldErrorSmall";
+export { default as IconToggleOn } from "./IconToggleOn";

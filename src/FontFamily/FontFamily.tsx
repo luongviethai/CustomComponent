@@ -10,7 +10,6 @@ import _ from "lodash";
 import $ from "jquery";
 import ConfirmSmall from "wix-ui-icons-common/ConfirmSmall";
 import {
-	Dropdown,
 	DropdownLayoutOption,
 	ListItemSelect,
 	listItemSelectBuilder,
@@ -19,6 +18,7 @@ import {
 	Text,
 	Box,
 } from "@wix/design-system";
+import Dropdown from "../Dropdown";
 import { insertFontToHead } from "./helpers";
 import { SEPARATOR, dataHooks } from "./constants";
 import SingleFont from "./SingleFont";

@@ -397,22 +397,22 @@ function Color(props: ColorPickerProps) {
 			<Box display="inline-block" marginTop="3px" width={385}>
 				<Box verticalAlign="middle">
 					<div className={classes.currentColorWrapper}>
-						<div
-							className={classes.currentColor}
-							onClick={handleTogglePicker}
+						<Tooltip
+							content={
+								isColor || isValueColor(_.get(value, FIELD_CODE))
+									? _.get(value, FIELD_CODE)
+									: _.get(valueExactlyColor.current, FIELD_CODE)
+							}
+							disabled={
+								(!_.get(value, FIELD_CODE) &&
+									!_.get(valueExactlyColor.current, FIELD_CODE)) ||
+								disabled
+							}
+							appendTo="window"
 						>
-							<Tooltip
-								content={
-									isColor || isValueColor(_.get(value, FIELD_CODE))
-										? _.get(value, FIELD_CODE)
-										: _.get(valueExactlyColor.current, FIELD_CODE)
-								}
-								disabled={
-									(!_.get(value, FIELD_CODE) &&
-										!_.get(valueExactlyColor.current, FIELD_CODE)) ||
-									disabled
-								}
-								appendTo="window"
+							<div
+								className={classes.currentColor}
+								onClick={handleTogglePicker}
 							>
 								<div
 									style={{
@@ -424,8 +424,8 @@ function Color(props: ColorPickerProps) {
 									className={classes.currentColorOverlay}
 									data-type="div-current-color"
 								/>
-							</Tooltip>
-						</div>
+							</div>
+						</Tooltip>
 						<TextButton
 							className={st(classes.expandBtn, {
 								actived: showPalette,

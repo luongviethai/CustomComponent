@@ -1,0 +1,16 @@
+/* @st-import [defaultScrollBar] from "../Foundation/stylable/default-scroll-bar.st.css";
+
+.list {
+  -st-mixin: defaultScrollBar;
+  outline: none;
+  position: relative;
+} */
+
+.placeholder {
+  display: inline-block;
+  height: 20px;
+  background-color: #000000;
+  width: '100%';
+  display: 'flex';
+  align-items: 'center'
+}
