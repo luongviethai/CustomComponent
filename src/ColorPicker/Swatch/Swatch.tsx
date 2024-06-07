@@ -1,8 +1,7 @@
 import { memo } from "react";
 import _ from "lodash";
 import tinycolor from "tinycolor2";
-import Delete from "wix-ui-icons-common/Delete";
-import Edit from "wix-ui-icons-common/Edit";
+import { Edit, Delete } from "@wix/wix-ui-icons-common";
 import { Box, Tooltip } from "@wix/design-system";
 import type { ColorPickerValue } from "../types";
 import { st, classes } from "./Swatch.st.css";
@@ -47,7 +46,7 @@ function Swatch(props: SwatchProps) {
 						selected: isSelected,
 						isTransparent: color?.code === "transparent",
 					})}
-					style={{ backgroundColor: code }}	
+					style={{ backgroundColor: code }}
 					onClick={() => _.isFunction(onSelect) && onSelect(color)}
 				>
 					<Tooltip
@@ -60,11 +59,7 @@ function Swatch(props: SwatchProps) {
 					</Tooltip>
 				</div>
 				{showActions && (
-					<Edit
-						className={classes.swatchEditBtn}
-						width="16px"
-						height="16px"
-					/>
+					<Edit className={classes.swatchEditBtn} width="16px" height="16px" />
 				)}
 			</Box>
 			{showActions && (

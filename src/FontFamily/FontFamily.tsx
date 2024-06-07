@@ -8,7 +8,7 @@ import React, {
 } from "react";
 import _ from "lodash";
 import $ from "jquery";
-import ConfirmSmall from "wix-ui-icons-common/ConfirmSmall";
+import { ConfirmSmall } from "@wix/wix-ui-icons-common";
 import {
 	DropdownLayoutOption,
 	ListItemSelect,

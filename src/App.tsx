@@ -6,6 +6,7 @@ import FontFamily from "./FontFamily";
 import BorderRadius from "./BorderRadius";
 import ColorPicker from "./ColorPicker";
 import DemoColor from "./DemoColor";
+import DemoFontFamily from "./DemoFontFamily";
 
 function App() {
 	const [valueRange, setValueRange] = useState(0);
@@ -52,20 +53,21 @@ function App() {
 
 	return (
 		<Box direction="vertical" width="500px">
-			<ColorPicker
+			{/* <ColorPicker
 				value={valueColor}
 				setValue={setValueColor}
 				isAlpha
 				previewPicker
-			/>
+			/> */}
 
 			{/* <DemoColor /> */}
 			{/* <DemoDynamicRows />
 			<Range value={valueRange} setValue={setValueRange} />
 			<BorderRadius value={valueBorderRadius} setValue={setValueBorderRadius} /> */}
-			<FontFamily fontVendors={fontVendors} id={"demo"} />
-			<Range value={valueRange} setValue={setValueRange} />
-			<BorderRadius value={valueBorderRadius} setValue={setValueBorderRadius} />
+			{/* <FontFamily fontVendors={fontVendors} id={"demo"} /> */}
+			{/* <Range value={valueRange} setValue={setValueRange} />
+			<BorderRadius value={valueBorderRadius} setValue={setValueBorderRadius} /> */}
+			<DemoFontFamily />
 		</Box>
 	);
 }

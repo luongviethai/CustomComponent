@@ -1,6 +1,6 @@
 import { Fragment, memo } from "react";
 import _ from "lodash";
-import Settings from "wix-ui-icons-common/Settings";
+import { Settings } from "@wix/wix-ui-icons-common";
 import { TextButton, Box } from "@wix/design-system";
 import type { ColorPickerGroup } from "../types";
 import { st, classes } from "./TabGroups.st.css";
@@ -27,7 +27,11 @@ function TabGroups(props: TabGroupsProps) {
 	} = props;
 
 	return (
-		<Box className={st(classes.root, { disabled })} verticalAlign="middle" gap="6px">
+		<Box
+			className={st(classes.root, { disabled })}
+			verticalAlign="middle"
+			gap="6px"
+		>
 			<div style={{ flex: 1 }} />
 			{showPalette &&
 				_.map(groups, (group) => (

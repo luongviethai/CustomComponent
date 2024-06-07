@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import _ from "lodash";
 import $ from "jquery";
 import tinycolor from "tinycolor2";
-import More from "wix-ui-icons-common/More";
+import { More } from "@wix/wix-ui-icons-common";
 
 import OutsideClick from "../OutsideClick";
 import Preview from "./Preview";
