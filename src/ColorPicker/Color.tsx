@@ -409,6 +409,7 @@ function Color(props: ColorPickerProps) {
 						>
 							<div
 								className={classes.currentColor}
+								id="background-current-color"
 								onClick={handleTogglePicker}
 							>
 								<div
