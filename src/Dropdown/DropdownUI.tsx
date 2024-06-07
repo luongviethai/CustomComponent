@@ -4,7 +4,6 @@ import axios from "axios";
 import PropTypes from "prop-types";
 
 import { listItemSectionBuilder } from "../ListItemSection";
-// import Search from "../Search";
 import { Search } from "@wix/design-system";
 import Dropdown from "./Dropdown";
 
