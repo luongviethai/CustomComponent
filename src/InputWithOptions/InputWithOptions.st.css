@@ -1,12 +1,12 @@
-/* @st-import DropdownBase from "../DropdownBase/DropdownBase.st.css";
-@st-import [B10, D10, F00] from "../Foundation/stylable/colors.st.css"; */
+@st-import DropdownBase from "../DropdownBase/DropdownBase.st.css";
+@st-import [B10, D10, F00] from "../Foundation/stylable/colors.st.css";
 
 :vars {
-	/* focusBoxShadow: 0 0 0 3px value(F00); */
+	focusBoxShadow: 0 0 0 3px value(F00);
 }
 
 .root {
-	/* -st-mixin: DropdownBase; */
+	-st-mixin: DropdownBase;
 	display: block;
 }
 
@@ -30,10 +30,10 @@
 
 .nativeSelect:focus {
 	outline: none;
-	/* border-color: value(B10); */
-	/* box-shadow: value(focusBoxShadow); */
+	border-color: value(B10);
+	box-shadow: value(focusBoxShadow);
 }
 
 .nativeOption {
-	/* color: value(D10); */
+	color: value(D10);
 }

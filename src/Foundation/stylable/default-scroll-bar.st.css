@@ -1,0 +1,28 @@
+@st-import [B30, B20, B10] from "./colors.st.css";
+
+.defaultScrollBar::-webkit-scrollbar {
+	height: 0;
+	width: 18px;
+}
+
+.defaultScrollBar::-webkit-scrollbar-button {
+	display: none;
+	height: 6px;
+}
+
+.defaultScrollBar::-webkit-scrollbar-thumb {
+	/* https://stackoverflow.com/a/16829330/5343330 */
+	background-color: value(B30);
+	background-clip: content-box;
+	border-radius: calc(5px * 2);
+	border: 5px solid transparent;
+	height: 72px;
+}
+
+.defaultScrollBar::-webkit-scrollbar-thumb:hover {
+	background-color: value(B20);
+}
+
+.defaultScrollBar::-webkit-scrollbar-thumb:active {
+	background-color: value(B10);
+}

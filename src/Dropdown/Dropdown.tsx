@@ -6,14 +6,10 @@ import InputWithOptions, {
 	ManualInputFnSignature,
 	OnSelectFnSignature,
 } from "../InputWithOptions";
-// import {
-// 	DropdownLayoutOption,
-// 	DropdownLayoutValueOption,
-// } from "../DropdownLayout";
 import type {
 	DropdownLayoutOption,
 	DropdownLayoutValueOption,
-} from "@wix/design-system";
+} from "../DropdownLayout";
 import type { DropdownProps } from "./types";
 import { st, classes } from "./Dropdown.st.css";
 

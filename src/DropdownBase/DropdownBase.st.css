@@ -1,0 +1,31 @@
+@st-import [popoverContent] from "../ui-core/popover/Popover.st.css";
+@st-import Popover from "../Popover/Popover.st.css";
+@st-import DropdownLayout from "../DropdownLayout/DropdownLayout.st.css";
+
+.root {
+	-st-extends: Popover;
+	-st-states: withWidth, withArrow;
+}
+
+.root::popoverContent {
+	overflow: hidden;
+
+	min-width: 192px;
+	width: 100%;
+}
+
+/* Reset width when the user define its own */
+.root:withWidth .popoverContent {
+	min-width: inherit;
+	width: inherit;
+}
+
+/* Add padding when an arrow is used */
+.root:withArrow::popover[data-placement*="top"] .popoverContent,
+.root:withArrow::popover[data-placement*="bottom"] .popoverContent {
+	padding: 10px 0;
+}
+
+.list {
+	-st-extends: DropdownLayout;
+}

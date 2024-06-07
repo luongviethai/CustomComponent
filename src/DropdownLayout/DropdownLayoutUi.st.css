@@ -1,10 +1,10 @@
-/* @st-import [defaultScrollBar] from "../Foundation/stylable/default-scroll-bar.st.css";
+@st-import [defaultScrollBar] from "../Foundation/stylable/default-scroll-bar.st.css";
 
 .list {
   -st-mixin: defaultScrollBar;
   outline: none;
   position: relative;
-} */
+}
 
 .placeholder {
   display: inline-block;

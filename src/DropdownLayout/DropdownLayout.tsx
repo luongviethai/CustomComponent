@@ -1,26 +1,17 @@
 /* eslint-disable radix */
 /* eslint-disable no-prototype-builtins */
-import React, { DOMElement, ReactElement, ReactNode } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import type { Required, $Keys } from "utility-types";
 import Loader from "../Loader";
-// import InfiniteScroll from '../utils/InfiniteScroll';
-// import scrollIntoView from '../utils/scrollIntoView';
-// import { filterObject } from '../utils/filterObject';
-import InfiniteScroll, {
-	scrollIntoView,
-	filterObject,
-	isString,
-} from "./utils";
-// import { listItemSectionBuilder } from "../ListItemSection";
-// import { listItemSelectBuilder } from "../ListItemSelect";
+import InfiniteScroll from "../utils/InfiniteScroll";
+import scrollIntoView from "../utils/scrollIntoView";
+import { filterObject } from "../utils/filterObject";
+import { listItemSectionBuilder } from "../ListItemSection";
+import { listItemSelectBuilder } from "../ListItemSelect";
 // import { listItemActionBuilder } from "../ListItemAction";
-import {
-	listItemSectionBuilder,
-	listItemSelectBuilder,
-	listItemActionBuilder,
-} from "@wix/design-system";
-// import { isString } from "../utils/StringUtils";
+import { listItemActionBuilder } from "@wix/design-system";
+import { isString } from "../utils/StringUtils";
 import { st, classes } from "./DropdownLayout.st.css";
 import {
 	DATA_HOOKS,

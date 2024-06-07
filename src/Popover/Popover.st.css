@@ -1,0 +1,155 @@
+@st-import calc from "../ui-core//mixins/calc/index.js";
+@st-import Popover, [arrow, withArrow] from "../ui-core/popover/Popover.st.css";
+@st-import [D10, D80] from "../Foundation/stylable/colors.st.css";
+@st-import [shadow30] from "../Foundation/stylable/shadows.st.css";
+@st-import [ease-3, ease-4] from "../Foundation/stylable/easing.st.css";
+
+:vars {
+	contentArrowSize: 8px;
+}
+
+.root {
+	-st-states: theme(string);
+	-st-extends: Popover;
+}
+
+.root[data-hook*="popover-portal"] {
+	/* This will cause the container's height to stay the same */
+	display: block;
+}
+
+/* Default styles with light theme */
+.root::popoverContent {
+	border: none;
+
+	border-radius: 8px;
+	box-sizing: border-box;
+	box-shadow: value(shadow30);
+	-webkit-font-smoothing: antialiased;
+
+	font-size: 14px;
+	line-height: 18px;
+
+	/* Light theme specific stuff */
+	color: value(D10);
+	background: white;
+}
+
+/* Overriding arrow definitions */
+.root::popover .arrow {
+	width: value(contentArrowSize);
+	height: value(contentArrowSize);
+
+	background: transparent;
+	box-sizing: border-box;
+
+	/* Defaults for the top arrow */
+	transform: rotateZ(45deg);
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, .1);
+}
+
+.root::popover[data-placement] .arrow {
+	border-width: calc(value(contentArrowSize) / 2);
+	border-color: transparent white white transparent;
+	margin: 0;
+}
+
+/*
+ * Right arrow
+ */
+.root::popover[data-placement*="right"].withArrow {
+	padding-left: calc(value(contentArrowSize) - 2px);
+}
+
+.root::popover[data-placement*="right"] .arrow {
+	transform: rotateZ(135deg);
+	left: calc(value(contentArrowSize) / 2 - 2px);
+
+	margin-top: value(contentArrowSize);
+	margin-bottom: value(contentArrowSize);
+}
+
+/*
+ * Left arrow
+ */
+.root::popover[data-placement*="left"].withArrow {
+	padding-right: calc(value(contentArrowSize) - 2px);
+}
+
+.root::popover[data-placement*="left"] .arrow {
+	transform: rotateZ(-45deg);
+	right: calc(value(contentArrowSize) / 2 - 2px);
+
+	margin-top: value(contentArrowSize);
+	margin-bottom: value(contentArrowSize);
+}
+
+/*
+ * Top arrow
+ */
+.root::popover[data-placement*="top"].withArrow {
+	padding-bottom: calc(value(contentArrowSize) - 2px);
+}
+
+.root::popover[data-placement*="top"] .arrow {
+	transform: rotateZ(45deg);
+	bottom: calc(value(contentArrowSize) / 2 - 2px);
+
+	margin-left: value(contentArrowSize);
+	margin-right: value(contentArrowSize);
+}
+
+/*
+ * Bottom arrow
+ */
+.root::popover[data-placement*="bottom"].withArrow {
+	padding-top: calc(value(contentArrowSize) - 2px);
+}
+
+.root::popover[data-placement*="bottom"] .arrow {
+	transform: rotateZ(-135deg);
+	top: calc(value(contentArrowSize) / 2 - 2px);
+
+	margin-left: value(contentArrowSize);
+	margin-right: value(contentArrowSize);
+}
+
+/* Dark theme */
+.root:theme(dark)::popoverContent {
+	color: value(D80);
+	background: value(D10);
+}
+
+.root:theme(dark)::popover .arrow {
+	border-color: transparent value(D10) value(D10) transparent;
+}
+
+/*
+ * Entrance and exit animation
+ */
+
+.root::popoverAnimation-enter {
+	opacity: 0;
+	transform: scale(0.9);
+}
+
+.root::popoverAnimation-enter-active {
+	opacity: 1;
+	transform: scale(1);
+
+	transition: opacity 150ms value(ease-3),
+		transform 150ms value(ease-3);
+}
+
+.root::popoverAnimation-exit {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.root::popoverAnimation-exit-active {
+	opacity: 0;
+	transform: scale(0.9);
+
+	transition: opacity 100ms value(ease-4),
+		transform 100ms value(ease-4);
+}

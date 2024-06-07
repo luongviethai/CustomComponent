@@ -9,18 +9,24 @@ import React, {
 import _ from "lodash";
 import $ from "jquery";
 import { ConfirmSmall } from "@wix/wix-ui-icons-common";
+
 import {
 	DropdownLayoutOption,
-	ListItemSelect,
-	listItemSelectBuilder,
-	type ListItemSelectProps,
-	listItemSectionBuilder,
+	// ListItemSelect,
+	// listItemSelectBuilder,
+	// type ListItemSelectProps,
+	// listItemSectionBuilder,
 	Text,
 	Box,
 } from "@wix/design-system";
+import { listItemSectionBuilder } from "../ListItemSection";
+import ListItemSelect, {
+	listItemSelectBuilder,
+	type ListItemSelectProps,
+} from "../ListItemSelect";
 import Dropdown from "../Dropdown";
 import { insertFontToHead } from "./helpers";
-import { SEPARATOR, dataHooks } from "./constants";
+import { SEPARATOR } from "./constants";
 import SingleFont from "./SingleFont";
 import { st, classes } from "./FontFamily.st.css";
 import type {

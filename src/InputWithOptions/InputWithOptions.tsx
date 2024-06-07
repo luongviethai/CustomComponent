@@ -4,10 +4,9 @@ import type { Required, $Keys } from "utility-types";
 import _ from "lodash";
 import omit from "omit";
 import uniqueId from "lodash/uniqueId";
-import { Input, Popover } from "@wix/design-system";
-// import Input from "../Input";
+import { Input } from "@wix/design-system";
 import DropdownLayout from "../DropdownLayout";
-// import Popover from "../Popover";
+import Popover from "../Popover";
 import { classes } from "./InputWithOptions.st.css";
 import HighlightContext from "./HighlightContext";
 import type {

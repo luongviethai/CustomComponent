@@ -1,9 +1,9 @@
-/* @st-import [THEME-COLOR-10, THEME-COLOR-20, THEME-COLOR-50, D10, D50, D80] from "../Foundation/stylable/colors.st.css";
+@st-import [THEME-COLOR-10, THEME-COLOR-20, THEME-COLOR-50, D10, D50, D80] from "../Foundation/stylable/colors.st.css";
 @st-import calc from "../Foundation/stylable/mixins/calc.tsx";
 @st-import [shadow30] from "../Foundation/stylable/shadows.st.css";
 @st-import [text-medium-normal] from "../Foundation/stylable/typography.st.css";
 @st-import [defaultScrollBar] from "../Foundation/stylable/default-scroll-bar.st.css";
-@st-import ListItemSelect from "../ListItemSelect/ListItemSelect.st.css"; */
+@st-import ListItemSelect from "../ListItemSelect/ListItemSelect.st.css";
 
 :vars {
 	option_height: 36px;
@@ -29,7 +29,7 @@
 }
 
 .contentContainer {
-	/* background: value(D80); */
+	background: value(D80);
 	border: none;
 	display: none;
 	opacity: 0;
@@ -48,7 +48,7 @@
 
 .root:containerStyles .contentContainer {
 	border-radius: 8px;
-	/* box-shadow: value(shadow30); */
+	box-shadow: value(shadow30);
 	position: absolute;
 }
 
@@ -83,15 +83,15 @@
 }
 
 .options {
-	/* -st-mixin: defaultScrollBar; */
+	-st-mixin: defaultScrollBar;
 	position: relative;
 	overflow: auto;
 }
 
 .option {
 	-st-states: selected, hovered, disabled, itemHeight(enum(small, big)), overrideStyle;
-	/* -st-mixin: text-medium-normal; */
-	/* color: value(D10); */
+	-st-mixin: text-medium-normal;
+	color: value(D10);
 	line-height: 1.5;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -108,7 +108,7 @@
 }
 
 .option:disabled {
-	/* color: value(D50); */
+	color: value(D50);
 	cursor: default;
 }
 
@@ -119,8 +119,8 @@
 }
 
 .option:hovered {
-	/* background: value(THEME-COLOR-50); */
-	/* color: value(D10); */
+	background: value(THEME-COLOR-50);
+	color: value(D10);
 }
 
 .option:focus {
@@ -128,21 +128,21 @@
 }
 
 .option:selected {
-	/* background-color: value(THEME-COLOR-10);
-	color: value(D80); */
+	background-color: value(THEME-COLOR-10);
+	color: value(D80);
 }
 
 .option:selected:hovered {
-	/* background-color: value(THEME-COLOR-20);
-	color: value(D80); */
+	background-color: value(THEME-COLOR-20);
+	color: value(D80);
 }
 
 .selectableOption {
-	/* -st-states: itemHeight(enum(big, small));
-	-st-extends: ListItemSelect; */
+	-st-states: itemHeight(enum(big, small));
+	-st-extends: ListItemSelect;
 }
 
-/* .selectableOption:itemHeight(small) {
+.selectableOption:itemHeight(small) {
 	min-height: value(option_height);
 }
 
@@ -150,7 +150,7 @@
 	min-height: value(big_option_height);
 	display: flex;
 	align-items: center;
-} */
+}
 
 .arrow {
 	position: absolute;
@@ -159,7 +159,7 @@
 	transform: translateX(-50%) rotateZ(45deg);
 	height: value(top-arrow-size);
 	width: value(top-arrow-size);
-	/* background: value(D80); */
+	background: value(D80);
 }
 
 .root:direction(up) .arrow {

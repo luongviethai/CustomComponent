@@ -1,9 +1,9 @@
-/* @st-import [title] from "../ListItemSection/ListItemSection.st.css";
+@st-import [title] from "../ListItemSection/ListItemSection.st.css";
 @st-import [D10, D60] from "../Foundation/stylable/colors.st.css";
 @st-import [SP1] from "../Foundation/stylable/spacing.st.css";
-@st-import Input from "../Input/Input.st.css";
+/* @st-import Input from "../Input/Input.st.css"; */
 
-.root .title:skin(standard) {
+/* .root .title:skin(standard) {
   padding-top: value(SP1);
   padding-bottom: value(SP1);
 }

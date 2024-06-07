@@ -1,0 +1,21 @@
+@property st-global(--wsr-shadow10);
+@property st-global(--wsr-shadow20);
+@property st-global(--wsr-shadow30);
+@property st-global(--wsr-shadow40);
+
+:vars {
+	s1: rgba(22, 45, 61, 0.12);
+	s2: rgba(22, 45, 61, 0.48);
+	s3: rgba(22, 45, 61, 0.06);
+	s4: rgba(22, 45, 61, 0.18);
+	s5: rgba(22, 45, 61, 0.24);
+	s6: rgba(22, 45, 61, 0.3);
+	s7: rgba(22, 45, 61, 0.36);
+
+	shadow10: var(--wsr-shadow10, 0 2px 1px 0 value(s2), 0 0 3px 0 value(s1));
+	shadow20: var(--wsr-shadow20, 0 2px 4px 0 value(s1), 0 0 6px 0 value(s1));
+	shadow30: var(--wsr-shadow30, 0 6px 6px 0 value(s3), 0 0 18px 0 value(s1));
+	shadow30InnerTop: var(--wsr-shadow30, inset 0 22px 18px -18px value(s1), inset 0 8px 6px -6px value(s3));
+	shadow30InnerBottom: var(--wsr-shadow30, inset 0 -22px 18px -18px value(s1), inset 0 -8px 6px -6px value(s3));
+	shadow40: var(--wsr-shadow40, 0 8px 8px 0 value(s1), 0 3px 24px 0 value(s4));
+}

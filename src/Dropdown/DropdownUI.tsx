@@ -3,20 +3,14 @@ import _ from "lodash";
 import axios from "axios";
 import PropTypes from "prop-types";
 
-// import { listItemSectionBuilder } from "../ListItemSection";
-import {
-	listItemSectionBuilder,
-	Search,
-	type OptionRender,
-} from "@wix/design-system";
-
+import { listItemSectionBuilder } from "../ListItemSection";
 // import Search from "../Search";
-
+import { Search } from "@wix/design-system";
 import Dropdown from "./Dropdown";
 
 import { classes, st } from "./DropdownUI.st.css";
 
-// import type { OptionRender } from "../ListItemSection";
+import type { OptionRender } from "../ListItemSection";
 import type { DropdownProps } from "./types";
 import type { DropdownLayoutOption } from "../DropdownLayout";
 import type { ChangeEvent } from "react";

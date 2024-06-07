@@ -1,0 +1,60 @@
+.pTopLeft {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.pTopCenter {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.pTopRight {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.pMiddleLeft,
+.pCenterLeft {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.pMiddleCenter,
+.pCenterCenter {
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.pMiddleRight,
+.pCenterRight {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+.pBottomLeft {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.pBottomCenter {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+}
+
+.pBottomRight {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}

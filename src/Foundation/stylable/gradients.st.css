@@ -1,0 +1,10 @@
+:vars {
+	/* Gradients */
+	GRAD_B10: linear-gradient(225deg, #389aec, #4ebcf5);
+	GRAD_D10: linear-gradient(225deg, #6f819d 4%, #829bb0);
+	GRAD_G10: linear-gradient(225deg, #4eb968, #5bca90);
+	GRAD_O10: linear-gradient(225deg, #fb6b33, #ffaf48);
+	GRAD_R10: linear-gradient(225deg, #ee6a51, #ff6686);
+
+	GR1: linear-gradient(307deg, #d4e5f2 10%, #eee8e5);
+}

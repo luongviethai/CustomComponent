@@ -1,0 +1,50 @@
+@st-import [wsr-font-family, wsr-font-weight-regular, wsr-font-weight-medium, wsr-font-weight-bold,
+            wsr-text-font-size-tiny, wsr-text-font-size-small, wsr-text-font-size-medium,
+            wsr-text-line-height-tiny, wsr-text-line-height-small, wsr-text-line-height-medium,
+            wsr-heading-font-size-h1, wsr-heading-font-size-h2, wsr-heading-font-size-h3, wsr-heading-font-size-h4,
+            wsr-heading-font-size-h5, wsr-heading-font-size-h6, wsr-heading-line-height-h1,
+            wsr-heading-line-height-h2,wsr-heading-line-height-h3, wsr-heading-line-height-h4,
+            wsr-heading-line-height-h5,wsr-heading-line-height-h6, wsr-caption-font-size-1,
+            wsr-caption-line-height-1] from './Foundation/stylable/typography.st.css';
+
+.root {
+  /* Fonts */
+  --wsr-font-family: value(wsr-font-family);
+
+  /** Font Weight **/
+  --wsr-font-weight-regular: value(wsr-font-weight-regular);
+  --wsr-font-weight-medium: value(wsr-font-weight-medium);
+  --wsr-font-weight-bold: value(wsr-font-weight-bold);
+
+  /** Text Font Sizes **/
+  --wsr-text-font-size-tiny: value(wsr-text-font-size-tiny);
+  --wsr-text-font-size-small: value(wsr-text-font-size-small);
+  --wsr-text-font-size-medium: value(wsr-text-font-size-medium);
+
+  /** Text Line Height **/
+  --wsr-text-line-height-tiny: value(wsr-text-line-height-tiny);
+  --wsr-text-line-height-small: value(wsr-text-line-height-small);
+  --wsr-text-line-height-medium: value(wsr-text-line-height-medium);
+
+  /** Heading Font Sizes */
+  --wsr-heading-font-size-h1: value(wsr-heading-font-size-h1);
+  --wsr-heading-font-size-h2: value(wsr-heading-font-size-h2);
+  --wsr-heading-font-size-h3: value(wsr-heading-font-size-h3);
+  --wsr-heading-font-size-h4: value(wsr-heading-font-size-h4);
+  --wsr-heading-font-size-h5: value(wsr-heading-font-size-h5);
+  --wsr-heading-font-size-h6: value(wsr-heading-font-size-h6);
+
+  /** Heading Line Height **/
+  --wsr-heading-line-height-h1: value(wsr-heading-line-height-h1);
+  --wsr-heading-line-height-h2: value(wsr-heading-line-height-h2);
+  --wsr-heading-line-height-h3: value(wsr-heading-line-height-h3);
+  --wsr-heading-line-height-h4: value(wsr-heading-line-height-h4);
+  --wsr-heading-line-height-h5: value(wsr-heading-line-height-h5);
+  --wsr-heading-line-height-h6: value(wsr-heading-line-height-h6);
+
+  /** Caption Font Sizes */
+  --wsr-caption-font-size-1: value(wsr-caption-font-size-1);
+
+  /** Caption Font Sizes */
+  --wsr-caption-line-height-1: value(wsr-caption-line-height-1);
+}

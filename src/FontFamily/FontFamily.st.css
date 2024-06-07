@@ -1,14 +1,16 @@
- /* @st-import ListItemSelect from "../../ListItemSelect/ListItemSelect.st.css";
- @st-import [D60] from '../../Foundation/stylable/colors.st.css'; 
+@st-import ListItemSelect from "../ListItemSelect/ListItemSelect.st.css";
+@st-import [D60] from '../Foundation/stylable/colors.st.css';
 
 .root {
 	width: 100%;
-	position: relative;
+}
 
+.root ListItemSelect {
+	position: relative;
 }
 
 .recent {
-	border-bottom: 1px solid #DFE5EB;
+	border-bottom: 1px solid value(D60);
 	padding-bottom: 4px;
 }
 
@@ -24,39 +26,4 @@
 .root :global(.admin-input-value input) {
 	font-family: inherit !important;
 	font-weight: inherit !important;
-} */
-
-
- /* @st-import ListItemSelect from "../../ListItemSelect/ListItemSelect.st.css"; */
- /* @st-import [D60] from '../../Foundation/stylable/colors.st.css'; */
-
- :vars {
- 	D60: #DFE5EB
- }
-
- .root {
- 	width: 100%;
- }
-
- .listItemSelect {
- 	position: relative;
- }
-
- .recent {
- 	border-bottom: 1px solid value(D60);
- 	padding-bottom: 4px;
- }
-
- .TexRecent {
- 	padding: 4px;
- 	padding-left: 7px;
- 	padding-right: 24px;
- 	display: inline-block;
- 	margin: 7px;
- 	text-transform: uppercase;
- }
-
- .root :global(.admin-input-value input) {
- 	font-family: inherit !important;
- 	font-weight: inherit !important;
- }
+}

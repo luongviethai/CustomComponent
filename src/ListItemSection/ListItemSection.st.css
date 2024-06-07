@@ -1,0 +1,73 @@
+@st-import [D20, D30, D40, D60, D70, D80] from "../Foundation/stylable/colors.st.css";
+/* @st-import Text from "../Text/Text.st.css"; */
+
+.root {
+	-st-states: subheader, divider, whitespace, ellipsis, suffix, newColorsBranding;
+	background-color: value(D80);
+	display: flex;
+	padding: 12px 24px 6px 24px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.root:subheader {
+	background-color: value(D70);
+	padding: 9px 24px;
+	box-shadow: inset 0 1px 0 0 value(D60), inset 0 -1px 0 0 value(D60);
+}
+
+.root:divider {
+	padding: 6px 24px 5px;
+}
+
+.root:whitespace {
+	padding: 6px 24px;
+}
+
+.title {
+	/* -st-extends: Text; */
+}
+
+/* .title:skin(standard) {
+	color: value(D40);
+}
+
+.root:subheader .title:skin(standard) {
+	color: value(D20);
+}
+
+.root:newColorsBranding:subheader .title:skin(standard) {
+	color: value(D30);
+} */
+
+.titleWrapper {
+	width: 100%;
+}
+
+.root:suffix .titleWrapper {
+	width: 70%;
+}
+
+.suffixWrapper {
+	width: 30%;
+	margin-left: 6px;
+	text-align: right;
+}
+
+:global([dir="rtl"]) .suffixWrapper {
+	margin-right: 6px;
+	text-align: left;
+}
+
+.suffix {
+	text-align: right;
+	height: auto !important;
+}
+
+:global([dir="rtl"]) .suffix {
+	text-align: left;
+}
+
+.root:not(:ellipsis) .suffix {
+	white-space: normal;
+}

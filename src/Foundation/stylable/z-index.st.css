@@ -1,0 +1,16 @@
+:vars {
+	/*
+    * This value is related to current BM z-index values of Header and Sidebar.
+    * Sidebar is 2, so Page should be beneath it.
+    */
+	zIndex_PAGE: 1;
+	/*
+    * The following values assume that the BM's Header has zIndex 2000
+    */
+	zIndex_NOTIFICATION: 4000;
+	zIndex_MODAL: 5000;
+	/*
+    * Making Tooltip higher than Modal, assumes that when a modal is Opened, then all Tooltip's are closed.
+    */
+	zIndex_TOOLTIP: 6000;
+}

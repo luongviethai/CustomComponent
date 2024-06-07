@@ -1,0 +1,187 @@
+/*
+ * Colors with opacity (only those stored as stylable vars) are managed in wix-ui-core only.
+ * We added there functionality of calc_rgba calculation, and colors with opacity are calculated there.
+ * We want to gradually remove colors duplications between projects
+ */
+@st-import calc_rgba from "./mixins/calc_rgba.tsx";
+
+:vars {
+	/* General */
+	D10: var(--wsr-color-D10, #162D3D);
+	/* Primary Text */
+	D20: var(--wsr-color-D20, #32536A);
+	/* Secondary Text */
+	D30: var(--wsr-color-D30, #577083);
+	D40: var(--wsr-color-D40, #7A92A5);
+	/* Placeholder Text */
+	D50: var(--wsr-color-D50, #B6C1CD);
+	/* Disabled - Icon */
+	D55: var(--wsr-color-D55, #CBD3DC);
+	/* Disabled - Text, Action Background */
+	D60: var(--wsr-color-D60, #DFE5EB);
+	/* Dividers, Disabled - Borders */
+	D65: var(--wsr-color-D65, #f1f5f9);
+	/* Dividers, Disabled - Borders */
+	D70: var(--wsr-color-D70, #F0F4F7);
+	/* Page Background, Disabled - Background */
+	D80: var(--wsr-color-D80, #FFFFFF);
+	/* Content box background */
+
+	/* Primary */
+	B00: var(--wsr-color-B00, #2B81CB);
+	/* Loader, Progress Bar */
+	B05: var(--wsr-color-B05, #308DDD);
+	B10: var(--wsr-color-B10, #3899EC);
+	/* Button, TextButton */
+	B20: var(--wsr-color-B20, #4EB7F5);
+	/* Hover for elements with B10, buttons, Notifications */
+	B30: var(--wsr-color-B30, #C1E4FE);
+	/* Tag(Hover), Floating Notification Border */
+	B40: var(--wsr-color-B40, #DAEFFE);
+	/* Tag(Default), Badge */
+	B50: var(--wsr-color-B50, #EAF7FF);
+	/* Floating Notification */
+	B60: var(--wsr-color-B60, #F4FAFE);
+
+	/* Destructive */
+	R00: var(--wsr-color-R00, #D6453D);
+	R05: var(--wsr-color-R05, #D8504C);
+	R10: var(--wsr-color-R10, #EE5951);
+	/* Button, TextButton */
+	R20: var(--wsr-color-R20, #FF6666);
+	/* Button(hover), Notification Bar */
+	R30: var(--wsr-color-R30, #FFD7D7);
+	/* Tag(hover), Floating Notification Border */
+	R40: var(--wsr-color-R40, #FFE1E1);
+	/* Tag(Default), Badge */
+	R50: var(--wsr-color-R50, #FFEBEB);
+	/* Floating Notification */
+	R60: var(--wsr-color-R60, #FFF5F5);
+
+	/* Premium */
+	P00: var(--wsr-color-P00, #8E21B1);
+	P10: var(--wsr-color-P10, #AA4DC8);
+	/* Button, TextButton (default, click) */
+	P20: var(--wsr-color-P20, #CD68ED);
+	/* Button (hover), Notification Bar */
+	P30: var(--wsr-color-P30, #E5C9EE);
+	/* Notification Border */
+	P40: var(--wsr-color-P40, #EEDBF4);
+	/* Badge */
+	P50: var(--wsr-color-P50, #FAEEFF);
+	/* Floating Notification */
+	P60: var(--wsr-color-P60, #FAF7FC);
+
+	/* Success */
+	G00: var(--wsr-color-G00, #44823F);
+	G05: var(--wsr-color-G05, #61AD5A);
+	G10: var(--wsr-color-G10, #60BC57);
+	/* Badge */
+	G20: var(--wsr-color-G20, #80C979);
+	/* Notification Bar, Action Background */
+	G30: var(--wsr-color-G30, #C9EEBC);
+	/* Notification Border */
+	G40: var(--wsr-color-G40, #DEF4D4);
+	/* Badge */
+	G50: var(--wsr-color-G50, #EDF9E5);
+	/* Floating Notification */
+	G60: var(--wsr-color-G60, #F2FBEF);
+
+	/* Warning */
+	Y00: var(--wsr-color-Y00, #C68801);
+	Y05: var(--wsr-color-Y05, #EDA200);
+	Y10: var(--wsr-color-Y10, #FDB10C);
+	/* Notification Bar, Badge */
+	Y20: var(--wsr-color-Y20, #FAC249);
+	Y30: var(--wsr-color-Y30, #FFD988);
+	/* Tag(hover), Floating Notification Border */
+	Y40: var(--wsr-color-Y40, #FEF4CD);
+	/* Tag(default), Badge */
+	Y50: var(--wsr-color-Y50, #FDF7DF);
+	/* Floating Notification */
+	Y60: var(--wsr-color-Y60, #FFFCF0);
+
+	/* Urgent */
+	O00: var(--wsr-color-O00, #EA5F0E);
+	O10: var(--wsr-color-O10, #FB7D33);
+	O20: var(--wsr-color-O20, #FF9A48);
+
+	/* Focus */
+	F00: var(--wsr-color-F00, #AADBFC);
+
+	/* Categories */
+	A1: var(--wsr-color-A1, #3370FB);
+	A2: var(--wsr-color-A2, #7852D2);
+	A3: var(--wsr-color-A3, #17B0E2);
+	A4: var(--wsr-color-A4, #C53E99);
+	A5: var(--wsr-color-A5, #FDB10C);
+	A6: var(--wsr-color-A6, #3D9FA1);
+	B1: var(--wsr-color-B1, #EF73C0);
+	B2: var(--wsr-color-B2, #FF8D41);
+	B3: var(--wsr-color-B3, #ED6779);
+	B4: var(--wsr-color-B4, #125b8f);
+	C1: var(--wsr-color-C1, #4abd81);
+	C2: var(--wsr-color-C2, #2682CD);
+	C3: var(--wsr-color-C3, #68A4D5);
+	C4: var(--wsr-color-C4, #FF8E8C);
+
+	/* With Opacity */
+	D10-03: var(--wsr-color-D10-03, rgba(22, 45, 61, 0.03));
+	D10-05: var(--wsr-color-D10-05, rgba(22, 45, 61, 0.05));
+	D10-06: var(--wsr-color-D10-06, rgba(22, 45, 61, 0.06));
+	D10-10: var(--wsr-color-D10-10, rgba(22, 45, 61, 0.10));
+	D10-12: var(--wsr-color-D10-12, rgba(22, 45, 61, 0.12));
+	D10-18: var(--wsr-color-D10-18, rgba(22, 45, 61, 0.18));
+	D10-20: var(--wsr-color-D10-20, rgba(22, 45, 61, 0.20));
+	D10-24: var(--wsr-color-D10-24, rgba(22, 45, 61, 0.24));
+	D10-30: var(--wsr-color-D10-30, rgba(22, 45, 61, 0.30));
+	D10-36: var(--wsr-color-D10-36, rgba(22, 45, 61, 0.36));
+	D10-42: var(--wsr-color-D10-42, rgba(22, 45, 61, 0.42));
+	D10-66: var(--wsr-color-D10-66, rgba(22, 45, 61, 0.66));
+	D10-90: var(--wsr-color-D10-90, rgba(22, 45, 61, 0.90));
+	D10-96: var(--wsr-color-D10-96, rgba(22, 45, 61, 0.96));
+
+	D20-48: var(--wsr-color-D20-48, rgba(50, 83, 106, 0.48));
+	/* new transparent color */
+	D20-54: var(--wsr-color-D20-54, rgba(50, 83, 106, 0.54));
+	/* hovered */
+	D20-60: var(--wsr-color-D20-60, rgba(50, 83, 106, 0.60));
+	/* clicked */
+
+	D40-20: var(--wsr-color-D40-20, rgba(122, 146, 165, 0.20));
+
+	D80-10: var(--wsr-color-D80-10, rgba(255, 255, 255, 0.10));
+	D80-20: var(--wsr-color-D80-20, rgba(255, 255, 255, 0.20));
+	D80-30: var(--wsr-color-D80-30, rgba(255, 255, 255, 0.30));
+	D80-48: var(--wsr-color-D80-48, rgba(255, 255, 255, 0.48));
+	D80-60: var(--wsr-color-D80-60, rgba(255, 255, 255, 0.60));
+	D80-70: var(--wsr-color-D80-70, rgba(255, 255, 255, 0.70));
+
+	B00-24: var(--wsr-color-B00-24, rgba(43, 129, 203, 0.24));
+	B00-42: var(--wsr-color-B00-42, rgba(43, 129, 203, 0.42));
+	B00-48: var(--wsr-color-B00-48, rgba(43, 129, 203, 0.48));
+
+	D10-00: var(--wsr-color-D10-00, rgba(22, 45, 61, 0.00));
+	D10-54: var(--wsr-color-D10-54, rgba(22, 45, 61, 0.54));
+	D80-00: var(--wsr-color-D80-00, rgba(255, 255, 255, 0));
+	D80-42: var(--wsr-color-D80-42, rgba(255, 255, 255, 0.42));
+	D80-66: var(--wsr-color-D80-66, rgba(255, 255, 255, 0.66));
+	D80-96: var(--wsr-color-D80-96, rgba(255, 255, 255, 0.96));
+	D80-97: var(--wsr-color-D80-97, rgba(255, 255, 255, 0.97));
+	B00-60: var(--wsr-color-B00-60, rgba(43, 129, 203, 0.60));
+
+	/* Theme */
+	THEME-COLOR-00: var(--wsr-color-00, value(B00));
+	THEME-COLOR-05: var(--wsr-color-05, value(B05));
+	THEME-COLOR-10: var(--wsr-color-10, value(B10));
+	THEME-COLOR-20: var(--wsr-color-20, value(B20));
+	THEME-COLOR-30: var(--wsr-color-30, value(B30));
+	THEME-COLOR-40: var(--wsr-color-40, value(B40));
+	THEME-COLOR-50: var(--wsr-color-50, value(B50));
+	THEME-COLOR-60: var(--wsr-color-60, value(B60));
+	THEME-TEXT-COLOR-PRIMARY: var(--wsr-text-color-primary, value(D10));
+	THEME-TEXT-COLOR-PRIMARY-LIGHT: var(--wsr-text-color-primary-light, value(D80));
+	THEME-TEXT-COLOR-SECONDARY: var(--wsr-text-color-secondary, value(D20));
+	THEME-TEXT-COLOR-SECONDARY-LIGHT: var(--wsr-text-color-secondary-light, value(D40));
+	THEME-DIVIDER-COLOR: var(--wsr-divider-color, value(D60));
+}
