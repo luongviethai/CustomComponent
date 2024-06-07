@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useMemo } from "react";
 import _ from "lodash";
 import { Layout } from "@wix/design-system";
 import Swatch from "../Swatch";
@@ -10,7 +10,6 @@ type SwatchesProps = {
 	colors?: ColorPickerColor[];
 	onDelete?: (color?: ColorPickerValue) => void;
 	onSelect?: (color?: ColorPickerValue) => void;
-	handleChangeSelected?: (isSelected?: boolean) => void;
 	selectedId?: string;
 	dataHook?: string;
 	showActions?: boolean;
@@ -24,19 +23,13 @@ function Swatches(props: SwatchesProps) {
 		onSelect,
 		selectedId,
 		showActions,
-		handleChangeSelected,
 		dataHook,
 		disabled,
 	} = props;
 
-	return (
-		<Layout
-			gap="8px"
-			cols={10}
-			className={st(classes.root)}
-			dataHook={dataHook}
-		>
-			{_.map(colors, (color, index) => (
+	const renderColors = useMemo(
+		() =>
+			_.map(colors, (color, index) => (
 				<Swatch
 					key={index}
 					isSelected={
@@ -54,10 +47,20 @@ function Swatches(props: SwatchesProps) {
 					onDelete={onDelete}
 					onSelect={onSelect}
 					showActions={showActions}
-					handleChangeSelected={handleChangeSelected}
 					disabled={disabled}
 				/>
-			))}
+			)),
+		[colors, disabled, onDelete, onSelect, selectedId, showActions]
+	);
+
+	return (
+		<Layout
+			gap="8px"
+			cols={10}
+			className={st(classes.root)}
+			dataHook={dataHook}
+		>
+			{renderColors}
 		</Layout>
 	);
 }

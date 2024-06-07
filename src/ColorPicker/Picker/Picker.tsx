@@ -127,10 +127,7 @@ function Picker(props: PickerProps) {
 	});
 
 	return (
-		<div
-			style={styles.saturation}
-			className={st(classes.root, { disabled })}
-		>
+		<div style={styles.saturation} className={st(classes.root, { disabled })}>
 			<Saturation
 				style={styles.Saturation}
 				hsl={hsl}
@@ -171,9 +168,7 @@ function Picker(props: PickerProps) {
 				/>
 			</div>
 			{isAlpha && (
-				<div
-					className={st(classes.picker, classes.alphaPickerWrapper)}
-				>
+				<div className={st(classes.picker, classes.alphaPickerWrapper)}>
 					<Alpha
 						style={styles.Alpha}
 						rgb={rgb}

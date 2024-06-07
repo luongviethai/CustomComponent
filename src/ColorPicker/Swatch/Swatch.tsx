@@ -11,21 +11,13 @@ type SwatchProps = {
 	isSelected?: boolean;
 	onDelete?: (color?: ColorPickerValue) => void;
 	onSelect?: (color?: ColorPickerValue) => void;
-	handleChangeSelected?: (isSelected?: boolean) => void;
 	showActions?: boolean;
 	disabled?: boolean;
 };
 
 function Swatch(props: SwatchProps) {
-	const {
-		color,
-		isSelected,
-		onSelect,
-		onDelete,
-		showActions,
-		handleChangeSelected,
-		disabled,
-	} = props;
+	const { color, isSelected, onSelect, onDelete, showActions, disabled } =
+		props;
 
 	const code = tinycolor(color?.code) ? color?.code : "";
 
@@ -34,12 +26,7 @@ function Swatch(props: SwatchProps) {
 	};
 
 	return (
-		<div
-			className={st(classes.root, { disabled })}
-			onMouseMove={() =>
-				!_.isUndefined(handleChangeSelected) && handleChangeSelected(true)
-			}
-		>
+		<div className={st(classes.root, { disabled })}>
 			<Box className={classes.swatchInner} align="center" position="relative">
 				<div
 					className={st(classes.swatch, {

@@ -94,7 +94,6 @@ function Color(props: ColorPickerProps) {
 	const [isFormExpanded, setFormExpanded] = useState<boolean>(false);
 	const [showSwatchActions, setShowSwatchActions] = useState<boolean>(false);
 	const [isModalShown, setModalShown] = useState<boolean>(false);
-	const [isSelected, setSelected] = useState<boolean>(true);
 	const [valueOriginColorHex, setValueOriginColorHex] = useState<ColorType>(
 		{} as ColorType
 	);
@@ -102,7 +101,10 @@ function Color(props: ColorPickerProps) {
 	const valueExactlyColor = useRef<ColorType>({} as ColorType);
 	const valueSelected = useRef<boolean>(false);
 
-	const activedGroup = _.find(groups, (group) => group.id === activedGroupId);
+	const activedGroup = useMemo(
+		() => _.find(groups, (group) => group.id === activedGroupId),
+		[activedGroupId, groups]
+	);
 
 	const isColor = useMemo(
 		() =>
@@ -236,7 +238,6 @@ function Color(props: ColorPickerProps) {
 			if (!color.id) {
 				valueSelected.current = true;
 			}
-			setSelected(false);
 			updateValue({ ...color });
 		},
 		[disabled, isAlpha, updateValue, value]
@@ -341,10 +342,6 @@ function Color(props: ColorPickerProps) {
 		[]
 	);
 
-	const handleChangeSelected = useCallback((isSelected?: boolean) => {
-		!_.isUndefined(isSelected) && setSelected(isSelected);
-	}, []);
-
 	const renderPreviewPicker = (preview: boolean) => (
 		<Picker
 			color={
@@ -447,7 +444,6 @@ function Color(props: ColorPickerProps) {
 						{showPalette && activedGroup ? (
 							<Form
 								group={activedGroup}
-								handleChangeSelected={handleChangeSelected}
 								isColor={isColor}
 								isExpanded={isFormExpanded && !!activedGroup?.editable}
 								isValueColor={isValueColor(_.get(value, FIELD_CODE))}
@@ -467,7 +463,6 @@ function Color(props: ColorPickerProps) {
 										: hightlightColorsSample
 								}
 								disabled={disabled}
-								handleChangeSelected={handleChangeSelected}
 								selectedId={valueSelected.current ? "" : selectedId}
 								onSelect={handleSelectColor}
 							/>
@@ -490,7 +485,6 @@ function Color(props: ColorPickerProps) {
 								<Swatches
 									colors={activedGroup.colors}
 									disabled={disabled}
-									handleChangeSelected={handleChangeSelected}
 									selectedId={valueSelected.current ? "" : selectedId}
 									showActions={showSwatchActions}
 									onDelete={handleDeleteColor}
