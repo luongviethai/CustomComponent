@@ -12,17 +12,20 @@ import {
 	SEPARATOR,
 } from "./FontFamily/constants";
 import FontFamily from "./FontFamily";
+import { Box } from "@wix/design-system";
+import FontWeight from "./FontWeight";
 
 export default function DemoFontFamily() {
 	const [fontVendors, setFontVendors] = useState<FontFamilyFontVendors>();
 	const [valueFont, setValueFont] = useState<FontFamilyValue>({
 		type: "google",
-		family: "Coiny",
+		family: "Abhaya Libre",
 		weight: "400",
 	});
 	const selectedType = valueFont?.type || "google";
 	const selectedFamily = valueFont?.family || "";
 	const selectedWeight = valueFont?.weight || "400";
+	const [valueFontWeight, setValueFontWeight] = useState({});
 
 	const handleChangeValueFont = (value?: FontFamilyValue) => {
 		value && setValueFont(value);
@@ -125,13 +128,22 @@ export default function DemoFontFamily() {
 	);
 
 	return (
-		<FontFamily
-			onChangeValue={handleChangeFontFamily}
-			value={selectedFamily}
-			selectedType={selectedType}
-			selectedWeight={selectedWeight}
-			fontVendors={fontVendors}
-			id={"demo"}
-		/>
+		<Box gap="SP1" direction="vertical">
+			<FontFamily
+				onChangeValue={handleChangeFontFamily}
+				value={selectedFamily}
+				selectedType={selectedType}
+				selectedWeight={selectedWeight}
+				fontVendors={fontVendors}
+				id={"demo"}
+			/>
+			<FontWeight
+				selectedFamily={selectedFamily}
+				selectedType={selectedType}
+				value={valueFontWeight}
+				setValue={setValueFontWeight}
+				fontVendors={fontVendors}
+			/>
+		</Box>
 	);
 }

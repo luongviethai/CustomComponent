@@ -229,7 +229,6 @@ function DropdownRender(props: DropdownProps) {
 					<>
 						{searchable && (
 							<Search
-								native
 								autoFocus={searchAutoFocus}
 								border="bottomLine"
 								placeholder={searchPlaceholder}
