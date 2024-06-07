@@ -10,15 +10,7 @@ import _ from "lodash";
 import $ from "jquery";
 import { ConfirmSmall } from "@wix/wix-ui-icons-common";
 
-import {
-	DropdownLayoutOption,
-	// ListItemSelect,
-	// listItemSelectBuilder,
-	// type ListItemSelectProps,
-	// listItemSectionBuilder,
-	Text,
-	Box,
-} from "@wix/design-system";
+import { DropdownLayoutOption, Text, Box } from "@wix/design-system";
 import { listItemSectionBuilder } from "../ListItemSection";
 import ListItemSelect, {
 	listItemSelectBuilder,

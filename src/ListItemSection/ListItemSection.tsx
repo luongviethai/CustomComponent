@@ -1,13 +1,10 @@
 import React from "react";
 import type { Required, $Keys } from "utility-types";
 import { Divider, Text, TextButton } from "@wix/design-system";
-// import Divider from "../Divider";
-// import Text, { WEIGHTS } from "../Text";
-// import TextButton from "../TextButton";
-// import { isString } from "../utils/StringUtils";
 import { WixStyleReactContext } from "../WixStyleReactProvider/context";
 import { dataHooks } from "./constants";
 import { st, classes } from "./ListItemSection.st.css";
+import { isString } from "../utils/StringUtils";
 import type {
 	ListItemSectionProps as ListItemSectionPropsCore,
 	ListItemSectionTypes,
@@ -37,8 +34,6 @@ type ListItemSectionProps = Required<
 	ListItemSectionPropsCore,
 	$Keys<typeof defaultProps>
 >;
-
-export const isString = (a) => typeof a === "string";
 
 class ListItemSection extends React.PureComponent<ListItemSectionProps> {
 	static displayName = "ListItemSection";

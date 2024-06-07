@@ -1,5 +1,4 @@
-@st-import [D20, D30, D40, D60, D70, D80] from "../Foundation/stylable/colors.st.css";
-/* @st-import Text from "../Text/Text.st.css"; */
+@st-import [D60, D20,D30, D40, D70, D80 ] from '../Foundation/stylable/colors.st.css';
 
 .root {
 	-st-states: subheader, divider, whitespace, ellipsis, suffix, newColorsBranding;
@@ -24,21 +23,7 @@
 	padding: 6px 24px;
 }
 
-.title {
-	/* -st-extends: Text; */
-}
-
-/* .title:skin(standard) {
-	color: value(D40);
-}
-
-.root:subheader .title:skin(standard) {
-	color: value(D20);
-}
-
-.root:newColorsBranding:subheader .title:skin(standard) {
-	color: value(D30);
-} */
+.title {}
 
 .titleWrapper {
 	width: 100%;

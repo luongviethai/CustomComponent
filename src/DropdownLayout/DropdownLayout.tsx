@@ -1,7 +1,6 @@
-/* eslint-disable radix */
-/* eslint-disable no-prototype-builtins */
 import React from "react";
 import ReactDOM from "react-dom";
+import _ from "lodash";
 import type { Required, $Keys } from "utility-types";
 import Loader from "../Loader";
 import InfiniteScroll from "../utils/InfiniteScroll";
@@ -9,7 +8,6 @@ import scrollIntoView from "../utils/scrollIntoView";
 import { filterObject } from "../utils/filterObject";
 import { listItemSectionBuilder } from "../ListItemSection";
 import { listItemSelectBuilder } from "../ListItemSelect";
-// import { listItemActionBuilder } from "../ListItemAction";
 import { listItemActionBuilder } from "@wix/design-system";
 import { isString } from "../utils/StringUtils";
 import { st, classes } from "./DropdownLayout.st.css";

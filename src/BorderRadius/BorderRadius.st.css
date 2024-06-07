@@ -1,9 +1,4 @@
-:vars {
-	B10: #116DFF;
-	D80: #FFFFFF;
-	D50: #DFE5EB;
-	D10-20: #000624 rgba(0, 6, 36, 0.20);
-}
+@st-import [B10, D80, D50, D10-20] from "../Foundation/stylable/colors.st.css";
 
 .root {
 	-st-states: disabled(boolean), readOnly(boolean);

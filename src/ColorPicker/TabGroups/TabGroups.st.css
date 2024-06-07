@@ -1,7 +1,4 @@
-:vars {
-	B10: #116DFF;
-	D10: #000624;
-}
+@st-import [B10, D10] from "../../Foundation/stylable/colors.st.css";
 
 .root {
 	-st-states: disabled;

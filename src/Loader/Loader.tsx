@@ -1,7 +1,5 @@
 import React from "react";
 
-// import Heading from '../Heading';
-// import Tooltip from '../Tooltip';
 import { Heading, Tooltip } from "@wix/design-system";
 
 import Arc from "./Arc";

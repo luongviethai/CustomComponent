@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unnecessary-type-constraint */
 import React, { Component } from "react";
 import type { Required, $Keys } from "utility-types";
 import _ from "lodash";

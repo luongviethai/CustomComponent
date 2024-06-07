@@ -1,10 +1,30 @@
-import * as React from "react";
-// import { OmitPolyfill, PopoverCommonProps } from "../common";
 import type {
 	DropdownLayoutValueOption,
 	DropdownLayoutProps,
 } from "../DropdownLayout";
-import type { InputProps } from "../Input";
+import type { InputProps } from "@wix/design-system";
+import type { PopoverProps } from "../Popover";
+export type OmitPolyfill<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>;
+
+export interface PopoverCommonProps {
+	appendTo?: PopoverProps["appendTo"];
+	dynamicWidth?: PopoverProps["dynamicWidth"];
+	excludeClass?: PopoverProps["excludeClass"];
+	fixed?: PopoverProps["fixed"];
+	flip?: PopoverProps["flip"];
+	hideDelay?: PopoverProps["hideDelay"];
+	maxWidth?: PopoverProps["maxWidth"];
+	minWidth?: PopoverProps["minWidth"];
+	moveArrowTo?: PopoverProps["moveArrowTo"];
+	moveBy?: PopoverProps["moveBy"];
+	onMouseEnter?: PopoverProps["onMouseEnter"];
+	onMouseLeave?: PopoverProps["onMouseLeave"];
+	placement?: PopoverProps["placement"];
+	showDelay?: PopoverProps["showDelay"];
+	timeout?: PopoverProps["timeout"];
+	width?: PopoverProps["width"];
+	zIndex?: PopoverProps["zIndex"];
+}
 
 export interface InputWithOptionsProps<
 	ManualInputFn = ManualInputFnSignature,

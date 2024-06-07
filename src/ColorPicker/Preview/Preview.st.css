@@ -1,14 +1,5 @@
-:vars {
-	SP1: 3px;
-	B20: #5999FF;
-	R10: #E62214;
-	Y10: #FFB700;
-	B60: #F4F7FF;
-	D80: #FFFFFF;
-	B40: #D6E6FE;
-	D10-66: #000624 rgba(0, 6, 36, 0.66);
-	D10-10: #000624 rgba(0, 6, 36, 0.10);
-}
+@st-import [B20, R10, Y10, B60,D80, B40, D10-66, D10-10 ] from "../../Foundation/stylable/colors.st.css";
+@st-import [SP1] from "../../Foundation/stylable/spacing.st.css";
 
 .root {
 	-st-states: isEmpty(boolean), showOverlay(boolean), type(enum(image, video, color)), disabled, status(enum(error, warning));

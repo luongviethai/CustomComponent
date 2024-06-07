@@ -1,9 +1,5 @@
 import React from "react";
-// import Text, { TextProps } from "../Text";
-// import Checkbox from "../Checkbox";
-// import Box from "../Box";
 import HighlightContext from "../InputWithOptions/HighlightContext";
-// import Highlighter from "../Highlighter/Highlighter";
 import {
 	Text,
 	Checkbox,

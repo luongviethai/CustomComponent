@@ -1,5 +1,4 @@
-@st-import [B10, B20, B50, D10-30, D80] from "../Foundation/stylable/colors.st.css";
-/* @st-import Text from "../Text/Text.st.css"; */
+@st-import [B10, B20,B50, D10-30, D80 ] from '../Foundation/stylable/colors.st.css';
 
 .root {
 	-st-states: checkbox, selected, disabled, highlighted;
@@ -88,9 +87,7 @@
 	margin: 9px 6px;
 }
 
-.title {
-	/* -st-extends: Text; */
-}
+.title {}
 
 .prefix {
 	margin: auto 0;
@@ -112,6 +109,4 @@
 	margin: auto auto auto 0;
 }
 
-.subtitle {
-	/* -st-extends: Text; */
-}
+.subtitle {}

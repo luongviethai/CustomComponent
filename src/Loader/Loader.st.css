@@ -1,5 +1,5 @@
-/* @st-import [THEME-COLOR-00, R10, THEME-COLOR-30, D80] from "../Foundation/stylable/colors.st.css";
-@st-import [ease-8, ease-9] from "../Foundation/stylable/easing.st.css"; */
+@st-import [THEME-COLOR-00, R10, THEME-COLOR-30, D80] from "../Foundation/stylable/colors.st.css";
+@st-import [ease-8, ease-9] from "../Foundation/stylable/easing.st.css";
 
 @keyframes rotation {
 	100% {
@@ -51,7 +51,7 @@
 }
 
 .darkArc {
-	/* stroke: value(THEME-COLOR-00); */
+	stroke: value(THEME-COLOR-00);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -79,69 +79,69 @@
 }
 
 .root:status(success) {
-	/* color: value(THEME-COLOR-00); */
+	color: value(THEME-COLOR-00);
 }
 
 .root:status(success):size(tiny) {
-	/* color: value(D80); */
+	color: value(D80);
 }
 
 .root:status(success):size(tiny) .darkArc {
-	/* fill: value(THEME-COLOR-00); */
+	fill: value(THEME-COLOR-00);
 }
 
 .root:status(error) {
-	/* color: value(R10); */
+	color: value(R10);
 }
 
 .root:status(error) .darkArc {
-	/* stroke: value(R10); */
+	stroke: value(R10);
 }
 
 .root:status(error):size(tiny) {
-	/* color: value(D80); */
+	color: value(D80);
 }
 
 .root:status(error):size(tiny) .darkArc {
-	/* fill: value(R10); */
+	fill: value(R10);
 }
 
 .root:status(loading):size(tiny) .arcsContainer .lightArc {
-	/* animation: rotation 2s value(ease-9) infinite; */
+	animation: rotation 2s value(ease-9) infinite;
 }
 
 .root:status(loading):size(tiny) .arcsContainer .darkArc {
-	/* animation: rotation 666ms value(ease-9) infinite; */
+	animation: rotation 666ms value(ease-9) infinite;
 }
 
 .root:status(loading):size(small) .arcsContainer .lightArc {
-	/* animation: rotation 2s value(ease-9) infinite; */
+	animation: rotation 2s value(ease-9) infinite;
 }
 
 .root:status(loading):size(small) .arcsContainer .darkArc {
-	/* animation: rotation 0.5s value(ease-9) infinite; */
+	animation: rotation 0.5s value(ease-9) infinite;
 }
 
 .root:status(loading):size(medium) .arcsContainer {
-	/* animation: rotation 2s value(ease-9) infinite; */
+	animation: rotation 2s value(ease-9) infinite;
 }
 
 .root:status(loading):size(medium) .arcsContainer .lightArc {
-	/* animation: rotation 666ms value(ease-8) infinite; */
+	animation: rotation 666ms value(ease-8) infinite;
 }
 
 .root:status(loading):size(large) .arcsContainer {
-	/* animation: rotation 2s value(ease-9) infinite; */
+	animation: rotation 2s value(ease-9) infinite;
 }
 
 .root:status(loading):size(large) .arcsContainer .lightArc {
-	/* animation: staggered-rotation 2s value(ease-8) infinite; */
+	animation: staggered-rotation 2s value(ease-8) infinite;
 }
 
 .root:color(blue) .lightArc {
-	/* stroke: value(THEME-COLOR-30); */
+	stroke: value(THEME-COLOR-30);
 }
 
 .root:color(white) .lightArc {
-	/* stroke: value(D80); */
+	stroke: value(D80);
 }

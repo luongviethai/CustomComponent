@@ -1,8 +1,4 @@
-:vars {
-    B30: #A8CAFF;
-    B20: #5999FF;
-    B10: #116DFF;
-}
+@st-import [B10, B30, B20] from "../../Foundation/stylable/colors.st.css";
 
 .root {
     max-height: 271px;

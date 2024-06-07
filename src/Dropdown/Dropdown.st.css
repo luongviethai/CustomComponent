@@ -1,12 +1,6 @@
-/* @st-import [input] from "../Input/Input.st.css"; */
-
 .showPointer {
 	-st-states: noBorder;
 }
-
-/* .showPointer .input {
-	cursor: pointer;
-} */
 
 .showPointer:noBorder {
 	border: none;

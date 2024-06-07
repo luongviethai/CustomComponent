@@ -6,6 +6,7 @@
 @st-import ListItemSelect from "../ListItemSelect/ListItemSelect.st.css";
 
 :vars {
+	wsr-font-family: 'Inter, Madefor, Helvetica, Arial, sans-serif';
 	option_height: 36px;
 	big_option_height: 47px;
 	top-arrow-size: 8px;

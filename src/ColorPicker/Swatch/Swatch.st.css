@@ -1,8 +1,8 @@
+@st-import [B10, D80, D50, D10] from "../../Foundation/stylable/colors.st.css";
+
 :vars {
 	swatchSize: 26px;
-	B10: #116DFF;
-	D80: #FFFFFF;
-	D10: #000624;
+
 }
 
 .root {

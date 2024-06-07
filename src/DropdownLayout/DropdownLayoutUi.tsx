@@ -10,8 +10,6 @@ import DropdownLayout, { DropdownLayoutProps } from "./DropdownLayout";
 import { classes } from "./DropdownLayoutUi.st.css";
 import { STATUS_LOADED, STATUS_LOADING } from "./constants";
 
-// Reference at https://github.com/bvaughn/react-virtualized-select/blob/master/source/VirtualizedSelect/VirtualizedSelect.js
-
 const cache = new CellMeasurerCache({
 	defaultHeight: 36,
 	fixedWidth: true,
