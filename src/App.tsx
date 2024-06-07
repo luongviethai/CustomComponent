@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Box } from "@wix/design-system";
 import Range from "./Range";
-import $ from "jquery";
 import DemoDynamicRows from "./DemoDynamicRows";
 import BorderRadius from "./BorderRadius";
 import ColorPicker from "./ColorPicker";
@@ -11,9 +10,12 @@ function App() {
 	const [valueRange, setValueRange] = useState(0);
 	const [valueBorderRadius, setValueBorderRadius] = useState({});
 	const [valueColor, setValueColor] = useState({});
+	const colorRef = useRef<HTMLElement>(null);
 
 	const onClickEditButton = () => {
-		$(".preview-picker #background-current-color")[0].click();
+		if (colorRef.current) {
+			colorRef.current.click();
+		}
 	};
 
 	const onClickDeleteButton = () => setValueColor(undefined);
@@ -23,6 +25,7 @@ function App() {
 		<Box direction="vertical" width="500px" gap="SP4">
 			<DemoFontFamily />
 			<ColorPicker
+				innerRef={colorRef}
 				className="preview-picker"
 				previewPicker
 				isAlpha

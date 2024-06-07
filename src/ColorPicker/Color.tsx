@@ -46,6 +46,7 @@ export type ColorPickerProps = CommonProps & {
 	onAddColor?: (color?: ColorType) => void;
 	setValue?: (value?: ColorPickerValue) => void;
 	onDeleteColor?: (color?: ColorType) => void;
+	innerRef?: HTMLElement | null;
 };
 
 function Color(props: ColorPickerProps) {
@@ -83,6 +84,7 @@ function Color(props: ColorPickerProps) {
 		previewPicker,
 		previewProps,
 		value,
+		innerRef,
 	} = props;
 	const [showPicker, setShowPicker] = useState<boolean | undefined>(
 		props.showPicker
@@ -411,6 +413,7 @@ function Color(props: ColorPickerProps) {
 								className={classes.currentColor}
 								id="background-current-color"
 								onClick={handleTogglePicker}
+								ref={innerRef}
 							>
 								<div
 									style={{
