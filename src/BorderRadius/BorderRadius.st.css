@@ -1,10 +1,17 @@
+:vars {
+	B10: #116DFF;
+	D80: #FFFFFF;
+	D50: #DFE5EB;
+	D10-20: #000624 rgba(0, 6, 36, 0.20);
+}
+
 .root {
 	-st-states: disabled(boolean), readOnly(boolean);
 }
 
 .link {
 	padding: 4px;
-	background-color: #FFFFFF;
+	background-color: value(D80);
 }
 
 .previewWrapper {
@@ -17,15 +24,15 @@
 	height: 105px;
 	box-sizing: content-box;
 	background: url("./images/Cross.svg") no-repeat;
-	background-color: #FFFFFF;
+	background-color: value(D80);
 }
 
 .root:disabled .preview {
-	border: 3px solid #000624 rgba(0, 6, 36, 0.20);
+	border: 3px solid value(D10-20);
 }
 
 .root:readOnly .preview {
-	border: solid 1px #DFE5EB;
+	border: solid 1px value(D50);
 }
 
 .paddingItem {

@@ -2,7 +2,10 @@ import _ from "lodash";
 
 import { memo, useCallback, useRef } from "react";
 import { Box } from "@wix/design-system";
-import NumberInput, { type BaseProps as NumberInputProps } from "./Number";
+import NumberInput, {
+	type BaseProps as NumberInputProps,
+	type Value as NumberInputValue,
+} from "./Number";
 import Linked from "./Linked";
 import {
 	POSITION_BOTTOM_LEFT,
@@ -77,7 +80,7 @@ const BorderRadius = (props: BorderRadiusProps) => {
 		});
 
 	const handleOnchangeValue = (
-		newValue: NumberInputProps["value"],
+		newValue: NumberInputValue,
 		position: Position
 	) => {
 		lastUpdated.current = position;
